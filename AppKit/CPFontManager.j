@@ -203,7 +203,7 @@ var CPSharedFontManager     = nil,
     return aFont;
 }
 
-- (@action)addFontTrait:(id)sender
+- (IBAction)addFontTrait:(id)sender
 {
     _activeChange = [CPDictionary dictionaryWithObject:[sender tag] forKey:@"addTraits"];
 

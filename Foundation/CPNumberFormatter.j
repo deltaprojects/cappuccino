@@ -22,9 +22,9 @@
 
 #import "Ref.h"
 
-@import <Foundation/CPString.j>
-@import <Foundation/CPFormatter.j>
-@import <Foundation/CPDecimalNumber.j>
+@import "CPString.j"
+@import "CPFormatter.j"
+@import "CPDecimalNumber.j"
 
 #define UPDATE_NUMBER_HANDLER_IF_NECESSARY() if (!_numberHandler) \
     _numberHandler = [CPDecimalNumberHandler decimalNumberHandlerWithRoundingMode:_roundingMode scale:_maximumFractionDigits raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:YES];
@@ -88,13 +88,13 @@ CPNumberFormatterRoundHalfUp        = CPRoundPlain;
     return self;
 }
 
-- (CPString)stringFromNumber:(CPNumber)number
+/*- (CPString)stringFromNumber:(CPNumber)number
 {
     if (_numberStyle == CPNumberFormatterPercentStyle)
     {
         number *= 100.0;
     }
-
+  
     var dcmn = [number isKindOfClass:CPDecimalNumber] ? number : [[CPDecimalNumber alloc] _initWithJSNumber:number];
 
     // TODO Add locale support.
@@ -124,6 +124,70 @@ CPNumberFormatterRoundHalfUp        = CPRoundPlain;
                 for (var commaPosition = 3, prefLength = [preFraction length]; commaPosition < prefLength; commaPosition += 4)
                 {
                     preFraction = [preFraction stringByReplacingCharactersInRange:CPMakeRange(prefLength - commaPosition, 0) withString:_groupingSeparator];
+                    prefLength += 1;
+                }
+            }
+
+            var string = preFraction;
+            if (fraction)
+                string += "." + fraction;
+
+            if (_numberStyle === CPNumberFormatterCurrencyStyle)
+            {
+                if (_currencySymbol)
+                    string = _currencySymbol + string;
+                else
+                    string = _currencyCode + string;
+            }
+            
+            if (_numberStyle == CPNumberFormatterPercentStyle)
+            {
+                string += "%";
+            }
+
+            return string;
+        default:
+            return [number description];
+    }
+}*/
+
+- (CPString)stringFromNumber:(CPNumber)number
+{
+    // Simple real number check
+    if (!isFinite(number)) number = 0;
+
+    if (_numberStyle == CPNumberFormatterPercentStyle)
+    {
+        number *= 100.0;
+    }
+
+    pow = Math.pow(10, _minimumFractionDigits);
+
+    // TODO Add locale support.
+    switch (_numberStyle)
+    {
+        case CPNumberFormatterCurrencyStyle:
+        case CPNumberFormatterDecimalStyle:
+        case CPNumberFormatterPercentStyle:
+            var rounded = Math.round(number * pow) / pow,
+                output = "" + rounded,
+                parts = output.split("."),
+                preFraction = parts[0],
+                fraction = parts.length > 1 ? parts[1] : "",
+                preFractionLength = preFraction.length,
+                commaPosition = 3;
+
+            while (fraction.length < _minimumFractionDigits)
+                fraction += "0";
+
+            // TODO This is just a temporary solution. Should be generalised.
+            // Add in thousands separators.
+            if (_groupingSeparator)
+            {
+                for (var commaPosition = 3, prefLength = preFraction.length; commaPosition < prefLength; commaPosition += 4)
+                {
+                    var location = prefLength - commaPosition;
+                    preFraction = '' + preFraction.substring(0, location) + _groupingSeparator + preFraction.substring(location, preFraction.length);
                     prefLength += 1;
                 }
             }

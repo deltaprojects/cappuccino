@@ -32,8 +32,8 @@ var currentCursor = nil,
     CPString _cssString @accessors(readonly);
     CPString _hotSpot @accessors(readonly, getter=hotSpot);
     CPImage  _image @accessors(readonly, getter=image);
-    BOOL     _isSetOnMouseEntered @accessors(readwrite, getter=isSetOnMouseEntered, setter=setOnMouseEntered:);
-    BOOL     _isSetOnMouseExited @accessors(readwrite, getter=isSetOnMouseExited, setter=setOnMouseExited:);
+    BOOL     _isSetOnMouseEntered @accessors(getter=isSetOnMouseEntered, setter=setOnMouseEntered:);
+    BOOL     _isSetOnMouseExited @accessors(getter=isSetOnMouseExited, setter=setOnMouseExited:);
 }
 
 - (id)initWithCSSString:(CPString)aString

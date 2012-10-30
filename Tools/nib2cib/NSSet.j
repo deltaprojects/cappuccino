@@ -21,7 +21,7 @@
  */
 
 @import <Foundation/CPObject.j>
-@import <Foundation/CPSet.j>
+@import <Foundation/CPSet/CPSet.j>
 
 
 @implementation NSSet : CPObject

@@ -1,4 +1,4 @@
-@import "CPControl.j"
+@import "../CPControl.j"
 
 
 var LEFT_MARGIN                 = 3.0,

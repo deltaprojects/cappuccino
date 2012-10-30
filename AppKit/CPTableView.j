@@ -20,10 +20,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import <Foundation/CPArray.j>
+@import <Foundation/CPArray/CPArray.j>
 @import <Foundation/CPIndexSet.j>
 
-@import "CGGradient.j"
+@import "CoreGraphics/CGGradient.j"
 
 @import "CPControl.j"
 @import "CPTableColumn.j"

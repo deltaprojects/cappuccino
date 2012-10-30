@@ -20,12 +20,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import <Foundation/CPArray.j>
+@import <Foundation/CPArray/CPArray.j>
 @import <Foundation/CPGeometry.j>
 @import <Foundation/CPObjJRuntime.j>
-@import <Foundation/CPSet.j>
+@import <Foundation/CPSet/CPSet.j>
 
-@import "CGAffineTransform.j"
+@import "CoreGraphics/CGAffineTransform.j"
 
 
 @import "CPColor.j"

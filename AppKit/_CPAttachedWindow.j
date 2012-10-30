@@ -23,7 +23,7 @@
 @import <Foundation/CPObject.j>
 
 @import "CPButton.j"
-@import "CPWindow.j"
+@import "CPWindow/CPWindow.j"
 
 
 CPClosableOnBlurWindowMask  = 1 << 4;

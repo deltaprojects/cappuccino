@@ -22,7 +22,7 @@
 
 @import "CPException.j"
 @import "CPObject.j"
-@import "CPSet.j"
+@import "CPSet/CPSet.j"
 @import "_CPCollectionKVCOperators.j"
 
 @implementation CPObject (CPSetKVO)

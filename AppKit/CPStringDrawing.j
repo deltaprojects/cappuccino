@@ -22,7 +22,7 @@
 
 @import <Foundation/CPString.j>
 
-@import "CPPlatformString.j"
+@import "Platform/CPPlatformString.j"
 
 
 var CPStringSizeWithFontInWidthCache = {};

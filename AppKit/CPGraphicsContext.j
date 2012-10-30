@@ -22,7 +22,7 @@
 
 @import <Foundation/CPObject.j>
 
-@import "CGContext.j"
+@import "CoreGraphics/CGContext.j"
 
 
 var CPGraphicsContextCurrent = nil;

@@ -24,12 +24,12 @@
 
 @import "CPCompatibility.j"
 @import "CPEvent.j"
-@import "CPMenu.j"
+@import "CPMenu/CPMenu.j"
 @import "CPResponder.j"
 @import "CPDocumentController.j"
 @import "CPThemeBlend.j"
-@import "CPCibLoading.j"
-@import "CPPlatform.j"
+@import "Cib/CPCibLoading.j"
+@import "Platform/CPPlatform.j"
 
 
 var CPMainCibFile               = @"CPMainCibFile",
@@ -401,7 +401,7 @@ CPRunContinuesResponse  = -1002;
 }
 
 
-- (void)_documentController:(NSDocumentController *)docController didCloseAll:(BOOL)didCloseAll context:(Object)info
+- (void)_documentController:(NSDocumentController)docController didCloseAll:(BOOL)didCloseAll context:(Object)info
 {
     // callback method for terminate:
     if (didCloseAll)

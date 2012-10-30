@@ -24,9 +24,9 @@
 @import <Foundation/CPObject.j>
 @import <Foundation/CPString.j>
 
-@import "CPImage.j"
-@import "CPMenu.j"
-@import "CPView.j"
+@import "../CPImage.j"
+@import "../CPMenu/CPMenu.j"
+@import "../CPView.j"
 @import "_CPMenuItemView.j"
 
 
@@ -488,7 +488,7 @@ CPOffState
     if (_submenu)
     {
         [_submenu setSupermenu:_menu];
-        [_submenu setTitle:[self title]]
+        [_submenu setTitle:[self title]];
 
         [self setTarget:_menu];
         [self setAction:@selector(submenuAction:)];
@@ -826,7 +826,7 @@ CPControlKeyMask
     [item setTarget:_target];
     [item setAction:_action];
     [item setEnabled:_isEnabled];
-    [item setHidden:_isHidden]
+    [item setHidden:_isHidden];
     [item setTag:_tag];
     [item setState:_state];
     [item setImage:_image];

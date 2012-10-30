@@ -19,9 +19,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import "CPDictionary.j"
+@import "../CPDictionary.j"
 @import "CPExpression.j"
-@import "CPString.j"
+@import "../CPString.j"
 
 var evaluatedObject = nil;
 

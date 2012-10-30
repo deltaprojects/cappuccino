@@ -20,7 +20,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import "CPWindow.j"
+@import "CPWindow/CPWindow.j"
 
 
 CPOKButton      = 1;

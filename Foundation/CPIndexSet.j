@@ -22,7 +22,7 @@
 
 #include "CPRange.h"
 
-@import "CPArray.j"
+@import "CPArray/CPArray.j"
 @import "CPObject.j"
 @import "CPRange.j"
 

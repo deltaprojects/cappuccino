@@ -22,7 +22,7 @@
 
 @import <Foundation/CPObject.j>
 
-@import "CGColor.j"
+@import "CoreGraphics/CGColor.j"
 
 @import "CPCompatibility.j"
 @import "CPImage.j"

@@ -92,7 +92,7 @@ CPCriticalAlertStyle        = 2;
     id              _modalDelegate;
     SEL             _didEndSelector;
 
-    CPWindow        _window                 @accessors(property=window,readonly);
+    // CPWindow        _window                 @accessors(property=window,readonly);
     int             _defaultWindowStyle;
 
     CPImageView     _alertImageView;
@@ -100,7 +100,7 @@ CPCriticalAlertStyle        = 2;
     CPTextField     _messageLabel;
     CPButton        _alertHelpButton;
 
-    BOOL            _needsLayout;
+    // BOOL            _needsLayout;
 }
 
 #pragma mark Creating Alerts
@@ -619,7 +619,7 @@ CPCriticalAlertStyle        = 2;
 /*!
     @ignore
 */
-- (@action)_showHelp:(id)aSender
+- (IBAction)_showHelp:(id)aSender
 {
     if ([_delegate respondsToSelector:@selector(alertShowHelp:)])
         [_delegate alertShowHelp:self];
@@ -628,7 +628,7 @@ CPCriticalAlertStyle        = 2;
 /*
     @ignore
 */
-- (@action)_takeReturnCodeFrom:(id)aSender
+- (IBAction)_takeReturnCodeFrom:(id)aSender
 {
     if ([_window isSheet])
     {

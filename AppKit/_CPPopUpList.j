@@ -582,7 +582,7 @@ var ListColumnIdentifier = @"1";
         case CPCarriageReturnCharacter:
             if ([self isVisible])
             {
-                [self closeListAfterItemClick];
+                [self closeListAfterItemClick];
                 return YES;
             }
             break;

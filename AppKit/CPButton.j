@@ -21,7 +21,7 @@
  */
 
 @import "_CPImageAndTextView.j"
-@import "CGGeometry.j"
+@import "CoreGraphics/CGGeometry.j"
 
 @import "CPControl.j"
 @import "CPStringDrawing.j"

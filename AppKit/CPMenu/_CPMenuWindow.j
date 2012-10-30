@@ -1,4 +1,4 @@
-@import "CPWindow.j"
+@import "../CPWindow/CPWindow.j"
 
 
 var _CPMenuWindowPool                       = [],

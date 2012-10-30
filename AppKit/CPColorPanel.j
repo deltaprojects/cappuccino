@@ -64,7 +64,7 @@ CPColorPickerViewHeight = 370;
 */
 @implementation CPColorPanel : CPPanel
 {
-    _CPColorPanelToolbar    _toolbar;
+    // _CPColorPanelToolbar    _toolbar; // Already exists on CPWindow
     _CPColorPanelSwatches   _swatchView;
     _CPColorPanelPreview    _previewView;
 

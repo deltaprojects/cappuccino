@@ -24,11 +24,11 @@
 @import <Foundation/CPNotificationCenter.j>
 @import <Foundation/CPUndoManager.j>
 
-@import "CGGeometry.j"
-@import "CPAnimation.j"
-@import "CPPlatformWindow.j"
-@import "CPResponder.j"
-@import "CPScreen.j"
+@import "../CoreGraphics/CGGeometry.j"
+@import "../CPAnimation.j"
+@import "../Platform/CPPlatformWindow.j"
+@import "../CPResponder.j"
+@import "../CPScreen.j"
 
 
 /*
@@ -3276,5 +3276,5 @@ CPCustomWindowShadowStyle   = 3;
 @import "_CPBorderlessWindowView.j"
 @import "_CPBorderlessBridgeWindowView.j"
 @import "_CPAttachedWindowView.j"
-@import "CPDragServer.j"
-@import "CPView.j"
+@import "../CPDragServer.j"
+@import "../CPView.j"

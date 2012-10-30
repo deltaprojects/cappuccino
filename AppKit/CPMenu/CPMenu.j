@@ -20,16 +20,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import <Foundation/CPArray.j>
+@import <Foundation/CPArray/CPArray.j>
 @import <Foundation/CPDictionary.j>
 @import <Foundation/CPNotificationCenter.j>
 @import <Foundation/CPString.j>
 
 @import "_CPMenuManager.j"
-@import "CPApplication.j"
-@import "CPClipView.j"
-@import "CPMenuItem.j"
-@import "CPPanel.j"
+@import "../CPApplication.j"
+@import "../CPClipView.j"
+@import "../CPMenuItem/CPMenuItem.j"
+@import "../CPPanel.j"
 
 
 CPMenuDidAddItemNotification        = @"CPMenuDidAddItemNotification";

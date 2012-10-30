@@ -21,7 +21,7 @@
  */
 
 @import "CGAffineTransform.j"
-@import "CPCompatibility.j"
+@import "../CPCompatibility.j"
 @import "CGGeometry.j"
 @import "CGPath.j"
 

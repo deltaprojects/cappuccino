@@ -19,11 +19,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import "CPArray.j"
-@import "CPDictionary.j"
-@import "CPKeyValueCoding.j"
-@import "CPObject.j"
-@import "CPString.j"
+@import "../CPArray/CPArray.j"
+@import "../CPDictionary.j"
+@import "../CPKeyValueCoding.j"
+@import "../CPObject.j"
+@import "../CPString.j"
 
 /*!
     An expression that always returns the same value.
@@ -390,8 +390,8 @@ CPMinusSetExpressionType        = 9;
 @import "_CPConstantValueExpression.j"
 @import "_CPSelfExpression.j"
 @import "_CPVariableExpression.j"
-@import "_CPKeyPathExpression.j"
 @import "_CPFunctionExpression.j"
+@import "_CPKeyPathExpression.j"
 @import "_CPAggregateExpression.j"
 @import "_CPSetExpression.j"
 @import "_CPSubqueryExpression.j"

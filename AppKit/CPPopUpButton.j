@@ -24,8 +24,8 @@
 
 @import "CPButton.j"
 @import "CPKeyValueBinding.j"
-@import "CPMenu.j"
-@import "CPMenuItem.j"
+@import "CPMenu/CPMenu.j"
+@import "CPMenuItem/CPMenuItem.j"
 
 var VISIBLE_MARGIN = 7.0;
 

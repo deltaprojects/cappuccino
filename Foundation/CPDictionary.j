@@ -20,7 +20,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import "CPArray.j"
+@import "CPArray/CPArray.j"
 @import "CPEnumerator.j"
 @import "CPException.j"
 @import "CPNull.j"
@@ -322,7 +322,7 @@
 */
 - (int)count
 {
-    return _count;
+    return self._count;
 }
 
 /*!
@@ -330,7 +330,7 @@
 */
 - (CPArray)allKeys
 {
-    return [_keys copy];
+    return [self._keys copy];
 }
 
 /*!
@@ -338,11 +338,11 @@
 */
 - (CPArray)allValues
 {
-    var index = _keys.length,
+    var index = self._keys.length,
         values = [];
 
     while (index--)
-        values.push(self.valueForKey(_keys[index]));
+        values.push(self.valueForKey(self._keys[index]));
 
     return values;
 }
@@ -357,7 +357,7 @@
 */
 - (CPArray)allKeysForObject:(id)anObject
 {
-    var count = _keys.length,
+    var count = self._keys.length,
         index = 0,
         matchingKeys = [],
         key = nil,
@@ -365,8 +365,8 @@
 
     for (; index < count; ++index)
     {
-        key = _keys[index];
-        value = _buckets[key];
+        key = self._keys[index];
+        value = self._buckets[key];
 
         if (value.isa && anObject && anObject.isa && [value respondsToSelector:@selector(isEqual:)] && [value isEqual:anObject])
             matchingKeys.push(key);
@@ -386,14 +386,14 @@
 {
     if (options & CPEnumerationReverse)
     {
-        var index = [_keys count] - 1,
+        var index = [self._keys count] - 1,
             stop = -1,
             increment = -1;
     }
     else
     {
         var index = 0,
-            stop = [_keys count],
+            stop = [self._keys count],
             increment = 1;
     }
 
@@ -405,8 +405,8 @@
 
     for (; index !== stop; index += increment)
     {
-        key = _keys[index];
-        value = _buckets[key];
+        key = self._keys[index];
+        value = self._buckets[key];
 
         if (predicate(key, value, stopRef))
             matchingKeys.push(key);
@@ -447,7 +447,7 @@
 */
 - (CPEnumerator)keyEnumerator
 {
-    return [_keys objectEnumerator];
+    return [self._keys objectEnumerator];
 }
 
 /*!
@@ -475,8 +475,8 @@
 
     while (index--)
     {
-        var currentKey = _keys[index],
-            lhsObject = _buckets[currentKey],
+        var currentKey = self._keys[index],
+            lhsObject = self._buckets[currentKey],
             rhsObject = aDictionary._buckets[currentKey];
 
         if (lhsObject === rhsObject)
@@ -532,7 +532,7 @@
 */
 - (id)objectForKey:(id)aKey
 {
-    var object = _buckets[aKey];
+    var object = self._buckets[aKey];
 
     return (object === undefined) ? nil : object;
 }
@@ -634,9 +634,9 @@
 - (CPString)description
 {
     var string = "@{\n",
-        keys = _keys,
+        keys = self._keys,
         index = 0,
-        count = _count;
+        count = self._count;
 
     for (; index < count; ++index)
     {
@@ -660,9 +660,9 @@
     var shouldStop = NO,
         shouldStopRef = AT_REF(shouldStop);
 
-    for (var index = 0; index < _count; index++)
+    for (var index = 0; index < self._count; index++)
     {
-        var key = _keys[index],
+        var key = self._keys[index],
             value = valueForKey(key);
 
         aFunction(key, value, shouldStopRef);

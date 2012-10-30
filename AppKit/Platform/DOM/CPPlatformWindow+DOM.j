@@ -110,14 +110,14 @@
 @import <Foundation/CPObject.j>
 @import <Foundation/CPRunLoop.j>
 
-@import "CPEvent.j"
-@import "CPText.j"
-@import "CPCompatibility.j"
+@import "../../CPEvent.j"
+@import "../../CPText.j"
+@import "../../CPCompatibility.j"
 
 @import "CPDOMWindowLayer.j"
 
-@import "CPPlatform.j"
-@import "CPPlatformWindow.j"
+@import "../CPPlatform.j"
+@import "../CPPlatformWindow.j"
 @import "CPPlatformWindow+DOMKeys.j"
 
 
@@ -1369,7 +1369,8 @@ var resizeTimer = nil;
 
         var insertionIndex = 0;
         if (middle !== undefined)
-            insertionIndex = _windowLevels[middle] > aLevel ? middle : middle + 1
+          insertionIndex = _windowLevels[middle] > aLevel ? middle : middle + 1;
+        
 
         [_windowLevels insertObject:aLevel atIndex:insertionIndex];
         layer._DOMElement.style.zIndex = aLevel;

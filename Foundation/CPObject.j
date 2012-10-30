@@ -154,7 +154,7 @@ CPLog(@"Got some class: %@", inst);
 */
 + (Class)superclass
 {
-    return super_class;
+    return self.super_class;
 }
 
 /*!
@@ -178,7 +178,7 @@ CPLog(@"Got some class: %@", inst);
 */
 - (BOOL)isKindOfClass:(Class)aClass
 {
-    return [isa isSubclassOfClass:aClass];
+    return [self.isa isSubclassOfClass:aClass];
 }
 
 + (BOOL)isKindOfClass:(Class)aClass
@@ -257,7 +257,7 @@ CPLog(@"Got some class: %@", inst);
 */
 - (IMP)methodForSelector:(SEL)aSelector
 {
-    return class_getMethodImplementation(isa, aSelector);
+    return class_getMethodImplementation(self.isa, aSelector);
 }
 
 /*!
@@ -287,12 +287,12 @@ CPLog(@"Got some class: %@", inst);
 */
 - (CPString)description
 {
-    return "<" + class_getName(isa) + " 0x" + [CPString stringWithHash:[self UID]] + ">";
+    return "<" + class_getName(self.isa) + " 0x" + [CPString stringWithHash:[self UID]] + ">";
 }
 
 + (CPString)description
 {
-    return class_getName(isa);
+    return class_getName(self.isa);
 }
 
 // Sending Messages
@@ -368,7 +368,7 @@ CPLog(@"Got some class: %@", inst);
 {
     [CPException raise:CPInvalidArgumentException reason:
         (class_isMetaClass(isa) ? "+" : "-") + " [" + [self className] + " " + aSelector + "] unrecognized selector sent to " +
-        (class_isMetaClass(isa) ? "class " + class_getName(isa) : "instance 0x" + [CPString stringWithHash:[self UID]])];
+        (class_isMetaClass(self.isa) ? "class " + class_getName(isa) : "instance 0x" + [CPString stringWithHash:[self UID]])];
 }
 
 // Archiving
@@ -458,7 +458,7 @@ CPLog(@"Got some class: %@", inst);
 {
     // FIXME: Why doesn't this work in KVO???
     // return class_getName([self class]);
-    return isa.name;
+    return self.isa.name;
 }
 
 // Extras
@@ -484,7 +484,7 @@ CPLog(@"Got some class: %@", inst);
     if (typeof self._UID === "undefined")
         self._UID = objj_generateObjectUID();
 
-    return _UID + "";
+    return self._UID + "";
 }
 
 /*!
@@ -525,7 +525,7 @@ CPLog(@"Got some class: %@", inst);
 */
 - (Class)superclass
 {
-    return isa.super_class;
+    return self.isa.super_class;
 }
 
 @end

@@ -415,7 +415,7 @@ Executable.fileExecutableSearcherForURL = function(/*CFURL*/ referenceURL)
     var referenceURLString = referenceURL.absoluteString(),
         cachedFileExecutableSearcher = cachedFileExecutableSearchers[referenceURLString],
         cachedSearchResults = { };
-
+    
     if (!cachedFileExecutableSearcher)
     {
         cachedFileExecutableSearcher = function(/*CFURL*/ aURL, /*BOOL*/ isQuoted, /*Function*/ success)

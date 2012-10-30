@@ -49,7 +49,7 @@
    $Date: 2008-06-12 04:44:00 -0600 (Thu, 12 Jun 2008) $ $Revision: 26630 $
    */
 
-@import "CPArray.j"
+@import "CPArray/CPArray.j"
 @import "CPNumber.j"
 
 // Decimal size limits

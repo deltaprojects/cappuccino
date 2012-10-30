@@ -21,7 +21,7 @@
  */
 
 @import "CPObject.j"
-@import "CPSet.j"
+@import "CPSet/CPSet.j"
 
 /*!
     @class CPCountedSet

@@ -22,14 +22,14 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import "CPArray.j"
-@import "CPException.j"
-@import "CPNull.j"
-@import "CPObject.j"
-@import "CPScanner.j"
-@import "CPSet.j"
-@import "CPValue.j"
-@import "CPCharacterSet.j"
+@import "../CPArray/CPArray.j"
+@import "../CPException.j"
+@import "../CPNull.j"
+@import "../CPObject.j"
+@import "../CPScanner.j"
+@import "../CPSet/CPSet.j"
+@import "../CPValue.j"
+@import "../CPCharacterSet.j"
 
 /*!
     @ingroup foundation

@@ -22,7 +22,7 @@
 
 @import "CPTextField.j"
 @import "CPView.j"
-@import "CPWindow.j"
+@import "CPWindow/CPWindow.j"
 
 _CPToolTipWindowMask = 1 << 27;
 
@@ -124,7 +124,7 @@ var _CPToolTipHeight = 24.0,
         textFrameSize.height += 4;
 
         _content = [CPTextField labelWithTitle:aString];
-        [_content setFont:[CPFont systemFontOfSize:_CPToolTipFontSize]]
+        [_content setFont:[CPFont systemFontOfSize:_CPToolTipFontSize]];
         [_content setLineBreakMode:CPLineBreakByCharWrapping];
         [_content setAlignment:CPJustifiedTextAlignment];
         [_content setAutoresizingMask:CPViewWidthSizable | CPViewHeightSizable];

@@ -1,4 +1,4 @@
-@import "CPPanel.j"
+@import "../CPPanel.j"
 @import "_CPMenuWindow.j"
 
 
@@ -12,7 +12,7 @@ var _CPMenuBarWindowBackgroundColor = nil,
 
 @implementation _CPMenuBarWindow : CPPanel
 {
-    CPMenu      _menu;
+    // CPMenu      _menu; // Defined in CPResponder?!
     CPView      _highlightView;
     CPArray     _menuItemViews;
 

@@ -20,7 +20,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import "CPArray.j"
+@import "CPArray/CPArray.j"
 @import "CPDictionary.j"
 @import "CPException.j"
 @import "CPNotification.j"

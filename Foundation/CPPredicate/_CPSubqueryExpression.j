@@ -19,8 +19,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import "CPArray.j"
-@import "CPDictionary.j"
+@import "../CPArray/CPArray.j"
+@import "../CPDictionary.j"
 @import "CPExpression.j"
 @import "CPPredicate.j"
 

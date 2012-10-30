@@ -3,7 +3,6 @@
  *     Copyright (c) 2011 Pear, Inc. All rights reserved.
  */
 
-@class _CPPredicateEditorTree;
 @implementation _CPPredicateEditorRowNode : CPObject
 {
     _CPPredicateEditorTree                   tree @accessors;

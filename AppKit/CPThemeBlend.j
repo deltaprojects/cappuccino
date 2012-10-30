@@ -23,8 +23,8 @@
 @import <Foundation/CPObject.j>
 
 @import "CPTheme.j"
-@import "_CPCibCustomResource.j"
-@import "_CPCibKeyedUnarchiver.j"
+@import "Cib/_CPCibCustomResource.j"
+@import "Cib/_CPCibKeyedUnarchiver.j"
 
 
 /*!

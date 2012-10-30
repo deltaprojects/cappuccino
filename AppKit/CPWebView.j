@@ -787,7 +787,7 @@ CPWebViewAppKitScrollMaxPollCount                  = 3;
 
     @param sender - the sender of the action. Should respond to -stringValue.
 */
-- (@action)takeStringURLFrom:(id)sender
+- (IBAction)takeStringURLFrom:(id)sender
 {
     [self setMainFrameURL:[sender stringValue]];
 }
@@ -797,7 +797,7 @@ CPWebViewAppKitScrollMaxPollCount                  = 3;
 
     @param sender - the sender of the action.
 */
-- (@action)goBack:(id)sender
+- (IBAction)goBack:(id)sender
 {
     [self goBack];
 }
@@ -807,7 +807,7 @@ CPWebViewAppKitScrollMaxPollCount                  = 3;
 
     @param sender - the sender of the action.
 */
-- (@action)goForward:(id)sender
+- (IBAction)goForward:(id)sender
 {
     [self goForward];
 }
@@ -817,7 +817,7 @@ CPWebViewAppKitScrollMaxPollCount                  = 3;
 
     @param sender - the sender of the action.
 */
-- (@action)stopLoading:(id)sender
+- (IBAction)stopLoading:(id)sender
 {
     // FIXME: what to do?
 }
@@ -827,7 +827,7 @@ CPWebViewAppKitScrollMaxPollCount                  = 3;
 
     @param sender - the sender of the action.
 */
-- (@action)reload:(id)sender
+- (IBAction)reload:(id)sender
 {
     // If we're displaying pure HTML, redisplay it.
     if (!_url && (_html !== nil))
@@ -842,7 +842,7 @@ CPWebViewAppKitScrollMaxPollCount                  = 3;
 
     @param sender - the sender of the receiver.
 */
-- (@action)print:(id)sender
+- (IBAction)print:(id)sender
 {
     try
     {

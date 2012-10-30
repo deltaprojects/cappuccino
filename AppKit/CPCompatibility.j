@@ -21,7 +21,7 @@
  */
 
 @import "CPEvent.j"
-@import "CPPlatform.j"
+@import "Platform/CPPlatform.j"
 
 
 // Browser Engines

@@ -22,10 +22,10 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import "CPDictionary.j"
-@import "CPException.j"
+@import "../CPDictionary.j"
+@import "../CPException.j"
 @import "CPExpression.j"
-@import "CPString.j"
+@import "../CPString.j"
 
 @implementation _CPVariableExpression :  CPExpression
 {

@@ -24,10 +24,10 @@
  *
  */
 
-@import "CPArray.j"
-@import "CPEnumerator.j"
-@import "CPNumber.j"
-@import "CPObject.j"
+@import "../CPArray/CPArray.j"
+@import "../CPEnumerator.j"
+@import "../CPNumber.j"
+@import "../CPObject.j"
 
 /*!
      @class CPMutableSet

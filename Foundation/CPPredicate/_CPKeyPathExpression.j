@@ -24,8 +24,8 @@
 
 @import "CPExpression.j"
 @import "_CPFunctionExpression.j"
-@import "CPKeyValueCoding.j"
-@import "CPString.j"
+@import "../CPKeyValueCoding.j"
+@import "../CPString.j"
 
 @implementation _CPKeyPathExpression : _CPFunctionExpression
 {
@@ -74,15 +74,6 @@
     result += [self keyPath];
 
     return result;
-}
-
-@end
-
-@implementation _CPConstantValueExpression (KeyPath)
-
-- (CPString)keyPath
-{
-    return [self constantValue];
 }
 
 @end

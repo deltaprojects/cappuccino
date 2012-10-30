@@ -3,6 +3,8 @@
  *     Copyright (c) 2011 Pear, Inc. All rights reserved.
  */
 
+@import <Foundation/CPObject.j>
+
 @implementation _CPPredicateEditorTree : CPObject
 {
     CPPredicateEditorRowTemplate         template @accessors;

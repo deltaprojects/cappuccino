@@ -20,7 +20,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import "CPTextField.j"
+@import "../CPTextField.j"
 @import "_CPTitleableWindowView.j"
 
 
@@ -113,7 +113,6 @@ var STANDARD_GRADIENT_HEIGHT                    = 41.0;
     _CPTexturedWindowHeadView   _headView;
     CPView                      _dividerView;
     CPView                      _bodyView;
-    CPView                      _toolbarView;
 
     CPButton                    _closeButton;
     CPButton                    _minimizeButton;

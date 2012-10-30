@@ -24,7 +24,7 @@
 @import <Foundation/CPString.j>
 
 @import "CPResponder.j"
-@import "CPWindow.j"
+@import "CPWindow/CPWindow.j"
 @import "CPDocument.j"
 
 
@@ -144,7 +144,7 @@
     Shows the window.
     @param aSender the object requesting the show
 */
-- (@action)showWindow:(id)aSender
+- (IBAction)showWindow:(id)aSender
 {
     var theWindow = [self window];
 
@@ -356,7 +356,7 @@
     {
         [viewControllerView removeFromSuperview];
         [viewControllerView setFrame:[contentView frame]];
-        [viewControllerView setAutoresizingMask:[contentView autoresizingMask]]
+        [viewControllerView setAutoresizingMask:[contentView autoresizingMask]];
         [[self window] setContentView:viewControllerView];
     }
     else

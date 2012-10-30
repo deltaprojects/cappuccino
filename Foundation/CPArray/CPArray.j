@@ -20,11 +20,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import "CPEnumerator.j"
-@import "CPException.j"
-@import "CPObject.j"
-@import "CPRange.j"
-@import "CPSortDescriptor.j"
+@import "../CPEnumerator.j"
+@import "../CPException.j"
+@import "../CPObject.j"
+@import "../CPRange.j"
+@import "../CPSortDescriptor.j"
 
 
 CPEnumerationNormal             = 0;
@@ -1015,4 +1015,5 @@ var _CPSharedPlaceholderArray   = nil;
 
 @end
 
+// Weird dependencies here... CPMutableArray requires CPArray requires _CPJavaScriptArray requires CPMutableArray
 @import "_CPJavaScriptArray.j"

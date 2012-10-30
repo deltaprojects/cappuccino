@@ -22,12 +22,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import "CPArray.j"
-@import "CPEnumerator.j"
+@import "../CPArray/CPArray.j"
+@import "../CPEnumerator.j"
 @import "CPExpression.j"
-@import "CPNull.j"
+@import "../CPNull.j"
 @import "CPPredicate.j"
-@import "CPString.j"
+@import "../CPString.j"
 
 /*!
     A predicate to directly compare the left and right hand sides.
@@ -408,7 +408,7 @@ var CPComparisonPredicateModifier,
     return YES;
 }
 
-- (BOOL)_evaluateValue:lhs rightValue:rhs
+- (BOOL)_evaluateValue:(id)lhs rightValue:(id)rhs
 {
     var leftIsNil = (lhs == nil || [lhs isEqual:[CPNull null]]),
         rightIsNil = (rhs == nil || [rhs isEqual:[CPNull null]]);

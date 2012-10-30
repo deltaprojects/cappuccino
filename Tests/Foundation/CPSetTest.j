@@ -1,5 +1,5 @@
 
-@import <Foundation/CPSet.j>
+@import <Foundation/CPSet/CPSet.j>
 
 
 @implementation CPSetTest : OJTestCase

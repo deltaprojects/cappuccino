@@ -1,8 +1,8 @@
 
 @import <Foundation/CPObject.j>
 
-@import "CGGeometry.j"
-@import "CPWindow.j"
+@import "../CoreGraphics/CGGeometry.j"
+@import "../CPWindow/CPWindow.j"
 
 
 var _CPCibWindowTemplateMinSizeKey                          = @"_CPCibWindowTemplateMinSizeKey",

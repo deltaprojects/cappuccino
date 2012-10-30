@@ -22,6 +22,7 @@
 
 @import <Foundation/CPDictionary.j>
 @import <Foundation/CPCountedSet.j>
+@import <Foundation/CPArray/_CPJavaScriptArray.j>
 
 @import "CPController.j"
 

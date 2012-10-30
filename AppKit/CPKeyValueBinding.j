@@ -24,7 +24,7 @@
  */
 
 @import <Foundation/CPObject.j>
-@import <Foundation/CPArray.j>
+@import <Foundation/CPArray/CPArray.j>
 @import <Foundation/CPDictionary.j>
 @import <Foundation/CPValueTransformer.j>
 

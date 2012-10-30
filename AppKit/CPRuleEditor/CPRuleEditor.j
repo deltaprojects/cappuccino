@@ -23,8 +23,8 @@
 @import <AppKit/CPTextField.j>
 @import <AppKit/CPViewAnimation.j>
 @import <AppKit/CPView.j>
-@import <Foundation/CPPredicate.j>
-@import <Foundation/CPArray.j>
+@import <Foundation/CPPredicate/CPPredicate.j>
+@import <Foundation/CPArray/CPArray.j>
 @import <Foundation/CPDictionary.j>
 @import <Foundation/CPIndexSet.j>
 

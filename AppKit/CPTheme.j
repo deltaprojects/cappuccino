@@ -427,7 +427,6 @@ CPThemeStateKeyWindow       = CPThemeState("keyWindow");
     CPString            _name;
     id                  _defaultValue;
     CPDictionary        _values @accessors(readonly, getter=values);
-
     JSObject            _cache;
     _CPThemeAttribute   _parentAttribute;
 }

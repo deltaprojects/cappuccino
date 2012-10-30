@@ -11,7 +11,7 @@
     CPRect       _animationTargetRect   @accessors(property=_animationTargetRect);
     BOOL         _selected              @accessors(getter=_isSelected, setter=_setSelected:);
     BOOL         _lastSelected          @accessors(getter=_isLastSelected, setter=_setLastSelected:);
-    CPColor      _backgroundColor       @accessors(property=backgroundColor);
+    // CPColor      _backgroundColor       @accessors(property=backgroundColor);
 }
 
 - (void)removeFromSuperview

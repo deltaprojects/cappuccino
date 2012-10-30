@@ -278,5 +278,5 @@ var PrimaryPlatformWindow   = NULL;
 @end
 
 #if PLATFORM(BROWSER)
-@import "CPPlatformWindow+DOM.j"
+@import "DOM/CPPlatformWindow+DOM.j"
 #endif

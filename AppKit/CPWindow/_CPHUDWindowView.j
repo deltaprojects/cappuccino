@@ -20,7 +20,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import "CPTextField.j"
+@import "../CPTextField.j"
 @import "_CPTitleableWindowView.j"
 
 var _CPHUDWindowViewBackgroundColor = nil,
@@ -32,7 +32,6 @@ var HUD_TITLEBAR_HEIGHT             = 26.0;
 
 @implementation _CPHUDWindowView : _CPTitleableWindowView
 {
-    CPView              _toolbarView;
     CPButton            _closeButton;
 }
 

@@ -200,7 +200,7 @@ var _CPEventPeriodicEventPeriod         = 0,
     CPWindow            _window;
     Number              _windowNumber;
     CPString            _characters;
-    CPString            _charactersIgnoringModifiers
+    CPString            _charactersIgnoringModifiers;
     BOOL                _isARepeat;
     unsigned            _keyCode;
     DOMEvent            _DOMEvent;

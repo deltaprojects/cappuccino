@@ -24,8 +24,8 @@
 
 @import "CABackingStore.j"
 
-@import "CGContext.j"
-@import "CGGeometry.j"
+@import "../CoreGraphics/CGContext.j"
+@import "../CoreGraphics/CGGeometry.j"
 
 
 #define DOM(aLayer) aLayer._DOMElement

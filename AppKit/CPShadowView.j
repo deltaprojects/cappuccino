@@ -22,7 +22,7 @@
 
 @import <Foundation/CPBundle.j>
 
-@import "CGGeometry.j"
+@import "CoreGraphics/CGGeometry.j"
 @import "CPImage.j"
 @import "CPImageView.j"
 @import "CPView.j"
@@ -110,7 +110,7 @@ var LIGHT_LEFT_INSET    = 3.0,
         [shadowView setAutoresizingMask:[aView autoresizingMask]];
         [aView removeFromSuperview];
         [shadowView addSubview:aView];
-        [aView setFrame:CGRectMake([shadowView leftInset], [shadowView topInset], width, height)]
+        [aView setFrame:CGRectMake([shadowView leftInset], [shadowView topInset], width, height)];
         [enclosingView addSubview:shadowView];
     }
 

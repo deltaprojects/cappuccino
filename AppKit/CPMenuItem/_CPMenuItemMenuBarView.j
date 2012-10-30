@@ -1,4 +1,4 @@
-@import "CPView.j"
+@import "../CPView.j"
 
 
 var HORIZONTAL_MARGIN           = 8.0,

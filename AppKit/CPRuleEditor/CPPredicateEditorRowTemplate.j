@@ -35,11 +35,11 @@ CPTransformableAttributeType = 1800;
 
 @implementation CPPredicateEditorRowTemplate : CPObject
 {
-    int            _templateType @accessors(readwrite, getter=_templateType, setter=_setTemplateType:);
-    unsigned   _predicateOptions @accessors(readwrite, setter=_setOptions:);
-    unsigned  _predicateModifier @accessors(readwrite, setter=_setModifier:);
-    unsigned  _leftAttributeType @accessors(readwrite, getter=leftAttributeType, setter=_setLeftAttributeType:);
-    unsigned _rightAttributeType @accessors(readwrite, getter=rightAttributeType, setter=_setRightAttributeType:);
+    int            _templateType @accessors(getter=_templateType, setter=_setTemplateType:);
+    unsigned   _predicateOptions @accessors(setter=_setOptions:);
+    unsigned  _predicateModifier @accessors(setter=_setModifier:);
+    unsigned  _leftAttributeType @accessors(getter=leftAttributeType, setter=_setLeftAttributeType:);
+    unsigned _rightAttributeType @accessors(getter=rightAttributeType, setter=_setRightAttributeType:);
     BOOL         _leftIsWildcard @accessors(property=leftIsWildcard);
     BOOL        _rightIsWildcard @accessors(property=rightIsWildcard);
     CPArray               _views @accessors(setter=setTemplateViews:);

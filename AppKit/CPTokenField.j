@@ -30,7 +30,7 @@
 @import "CPScrollView.j"
 @import "CPTextField.j"
 @import "CPTableView.j"
-@import "CPWindow.j"
+@import "CPWindow/CPWindow.j"
 @import "_CPAutocompleteMenu.j"
 
 #if PLATFORM(DOM)
@@ -907,7 +907,7 @@ var CPScrollDestinationNone             = 0,
     [self interpretKeyEvents:[anEvent]];
 
     [[CPRunLoop currentRunLoop] limitDateForMode:CPDefaultRunLoopMode];
-}}
+}
 
 - (void)keyUp:(CPEvent)anEvent
 {

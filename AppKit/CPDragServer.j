@@ -25,7 +25,7 @@
 @import "CPImageView.j"
 @import "CPPasteboard.j"
 @import "CPView.j"
-@import "CPWindow.j"
+@import "CPWindow/CPWindow.j"
 
 
 CPDragOperationNone     = 0;
