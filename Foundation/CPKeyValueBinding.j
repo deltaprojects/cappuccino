@@ -23,12 +23,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import <Foundation/CPObject.j>
-@import <Foundation/CPArray.j>
-@import <Foundation/CPDictionary.j>
-@import <Foundation/CPInvocation.j>
-@import <Foundation/CPValueTransformer.j>
-@import <Foundation/CPKeyValueObserving.j>
+@import "CPObject.j"
+@import "CPArray.j"
+@import "CPDictionary.j"
+@import "CPInvocation.j"
+@import "CPValueTransformer.j"
+@import "CPKeyValueObserving.j"
 
 @class CPButton
 
@@ -240,9 +240,27 @@ var CPBindingOperationAnd = 0,
 
     newValue = [self reverseTransformValue:newValue withOptions:options];
 
-    [self suppressSpecificNotificationFromObject:destination keyPath:keyPath];
-    [destination setValue:newValue forKeyPath:keyPath];
-    [self unsuppressSpecificNotificationFromObject:destination keyPath:keyPath];
+    if ([options objectForKey:CPValidatesImmediatelyBindingOption]) {
+        var error = nil,
+            value = [newValue copy],
+            successful = [destination validateValue:@ref(value) forKeyPath:keyPath error:@ref(error)],
+            validatedValueDiffersFromNewValue = ![newValue isEqual:value];
+
+        if (successful == NO) {
+           [CPException raise:CPGenericException reason:@"Failing validations not implemented yet"];
+        }
+
+        if (!validatedValueDiffersFromNewValue)
+            [self suppressSpecificNotificationFromObject:destination keyPath:keyPath];
+        [destination setValue:value forKeyPath:keyPath];
+        if (!validatedValueDiffersFromNewValue)
+            [self unsuppressSpecificNotificationFromObject:destination keyPath:keyPath];
+    } else {
+        [self suppressSpecificNotificationFromObject:destination keyPath:keyPath];
+        [destination setValue:newValue forKeyPath:keyPath];
+        [self unsuppressSpecificNotificationFromObject:destination keyPath:keyPath];
+    }
+
 }
 
 - (id)valueForBinding:(CPString)aBinding

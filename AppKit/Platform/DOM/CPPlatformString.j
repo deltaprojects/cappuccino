@@ -24,7 +24,9 @@ var DOMFixedWidthSpanElement    = nil,
     DOMFlexibleWidthSpanElement = nil,
     DOMMetricsDivElement        = nil,
     DOMMetricsImgElement        = nil,
-    DefaultFont                 = nil;
+    DefaultFont                 = nil,
+    CanvasFixedWidthContext     = nil,
+    SingleLineHeightCache       = {};
 
 @implementation CPPlatformString : CPBasePlatformString
 {
@@ -88,6 +90,16 @@ var DOMFixedWidthSpanElement    = nil,
 
     bodyElement.appendChild(DOMFlexibleWidthSpanElement);
     bodyElement.appendChild(DOMFixedWidthSpanElement);
+
+    var quad = 10,
+        canvas = document.createElement("canvas");
+    canvas.width = quad;
+    canvas.height = quad;
+
+    CanvasFixedWidthContext = canvas.getContext("2d");
+    CanvasFixedWidthContext.fillStyle = "white";
+    CanvasFixedWidthContext.fillRect(-1, -1, quad+2, quad+2);
+    CanvasFixedWidthContext.fillStyle = "black";
 }
 
 + (void)createDOMMetricsElements
@@ -134,24 +146,32 @@ var DOMFixedWidthSpanElement    = nil,
     if (!DOMFixedWidthSpanElement)
         [self createDOMElements];
 
-    var span;
+    var span,
+        css = [(aFont || DefaultFont) cssString];
 
-    if (!aWidth)
+    if (!aWidth && SingleLineHeightCache[css]) {
+        CanvasFixedWidthContext.font = css;
+        var metrics = CanvasFixedWidthContext.measureText(aString);
+        return CGSizeMake(metrics.width, SingleLineHeightCache[css]);
+    } else if (!aWidth) {
         span = DOMFlexibleWidthSpanElement;
-    else
-    {
+    } else {
         span = DOMFixedWidthSpanElement;
         span.style.width = ROUND(aWidth) + "px";
     }
 
-    span.style.font = [(aFont || DefaultFont) cssString];
+    span.style.font = css;
 
     if (CPFeatureIsCompatible(CPJavaScriptInnerTextFeature))
         span.innerText = aString;
     else if (CPFeatureIsCompatible(CPJavaScriptTextContentFeature))
         span.textContent = aString;
 
-    return CGSizeMake(span.clientWidth + 1, span.clientHeight);
+    if (!aWidth) {
+        SingleLineHeightCache[css] = span.clientHeight;
+    }
+
+    return CGSizeMake(span.clientWidth, span.clientHeight);
 }
 
 + (CPDictionary)metricsOfFont:(CPFont)aFont

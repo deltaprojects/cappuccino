@@ -11,7 +11,7 @@
 //
 
 
-@import <Foundation/CPObject.j>
+@import "CPObject.j"
 
 var CPControllerDeclaredKeysKey = @"CPControllerDeclaredKeysKey";
 

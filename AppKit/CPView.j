@@ -1846,15 +1846,10 @@ var CPViewFlags                     = { },
 
     if (_backgroundType === BackgroundTrivialColor || _backgroundType === BackgroundTransparentColor)
     {
-        var colorCSS = colorExists ? [_backgroundColor cssString] : "";
-
         if (colorNeedsDOMElement)
         {
             _DOMElement.style.background = "";
             _DOMImageParts[0].style.background = [_backgroundColor cssString];
-
-            if (patternImage)
-                CPDomDisplayServerSetStyleBackgroundSize(_DOMImageParts[0], [patternImage size].width + "px", [patternImage size].height + "px");
 
             if (CPFeatureIsCompatible(CPOpacityRequiresFilterFeature))
                 _DOMImageParts[0].style.filter = "alpha(opacity=" + [_backgroundColor alphaComponent] * 100 + ")";
@@ -1865,10 +1860,10 @@ var CPViewFlags                     = { },
             CPDOMDisplayServerSetStyleSize(_DOMImageParts[0], size.width, size.height);
         }
         else
-            _DOMElement.style.background = colorCSS;
-
-            if (patternImage)
-                CPDomDisplayServerSetStyleBackgroundSize(_DOMElement, [patternImage size].width + "px", [patternImage size].height + "px");
+            _DOMElement.style.background = colorExists ? [_backgroundColor cssString] : "";
+            if (![_backgroundColor isRepeatable]) {
+                _DOMElement.style.backgroundSize = "100% 100%";
+            }
     }
     else
     {
@@ -1889,7 +1884,10 @@ var CPViewFlags                     = { },
 
             CPDOMDisplayServerSetStyleSize(_DOMImageParts[partIndex], size.width, size.height);
 
-            _DOMImageParts[partIndex].style.background = "url(\"" + [image filename] + "\")";
+            _DOMImageParts[partIndex].style.backgroundImage = "url(\"" + [image filename] + "\")";
+            if (![_backgroundColor isRepeatable]) {
+                _DOMImageParts[partIndex].style.backgroundSize = "100% 100%";
+            }
 
             if (!supportsRGBA)
             {
@@ -1973,7 +1971,9 @@ var CPViewFlags                     = { },
             // Make sure to repeat the top and bottom pieces horizontally if they're not the exact width needed.
             if (top)
             {
-                CPDomDisplayServerSetStyleBackgroundSize(_DOMImageParts[partIndex], frameSize.width + "px", top + "px");
+                if (![_backgroundColor isRepeatable]) {
+                    _DOMElement.style.backgroundSize = "100% 100%";
+                }
                 CPDOMDisplayServerSetStyleLeftTop(_DOMImageParts[partIndex], NULL, 0.0, 0.0);
                 CPDOMDisplayServerSetStyleSize(_DOMImageParts[partIndex], frameSize.width, top);
                 partIndex++;
@@ -1983,14 +1983,18 @@ var CPViewFlags                     = { },
                 var height = frameSize.height - top - bottom;
 
                 //_DOMImageParts[partIndex].style.backgroundSize =  frameSize.width + "px " + height + "px";
-                CPDomDisplayServerSetStyleBackgroundSize(_DOMImageParts[partIndex], frameSize.width + "px", height + "px");
+                if (![_backgroundColor isRepeatable]) {
+                    _DOMElement.style.backgroundSize = "100% 100%";
+                }
                 CPDOMDisplayServerSetStyleLeftTop(_DOMImageParts[partIndex], NULL, 0.0, top);
                 CPDOMDisplayServerSetStyleSize(_DOMImageParts[partIndex], frameSize.width, height);
                 partIndex++;
             }
             if (bottom)
             {
-                CPDomDisplayServerSetStyleBackgroundSize(_DOMImageParts[partIndex], frameSize.width + "px", bottom + "px");
+                if (![_backgroundColor isRepeatable]) {
+                    _DOMElement.style.backgroundSize = "100% 100%";
+                }
                 CPDOMDisplayServerSetStyleLeftBottom(_DOMImageParts[partIndex], NULL, 0.0, 0.0);
                 CPDOMDisplayServerSetStyleSize(_DOMImageParts[partIndex], frameSize.width, bottom);
             }
@@ -2005,7 +2009,9 @@ var CPViewFlags                     = { },
             // Make sure to repeat the left and right pieces vertically if they're not the exact height needed.
             if (left)
             {
-                CPDomDisplayServerSetStyleBackgroundSize(_DOMImageParts[partIndex], left + "px", frameSize.height + "px");
+                if (![_backgroundColor isRepeatable]) {
+                    _DOMElement.style.backgroundSize = "100% 100%";
+                }
                 CPDOMDisplayServerSetStyleLeftTop(_DOMImageParts[partIndex], NULL, 0.0, 0.0);
                 CPDOMDisplayServerSetStyleSize(_DOMImageParts[partIndex], left, frameSize.height);
                 partIndex++;
@@ -2014,14 +2020,18 @@ var CPViewFlags                     = { },
             {
                 var width = (frameSize.width - left - right);
 
-                CPDomDisplayServerSetStyleBackgroundSize(_DOMImageParts[partIndex], width + "px", frameSize.height + "px");
+                if (![_backgroundColor isRepeatable]) {
+                    _DOMElement.style.backgroundSize = "100% 100%";
+                }
                 CPDOMDisplayServerSetStyleLeftTop(_DOMImageParts[partIndex], NULL, left, 0.0);
                 CPDOMDisplayServerSetStyleSize(_DOMImageParts[partIndex], width, frameSize.height);
                 partIndex++;
             }
             if (right)
             {
-                CPDomDisplayServerSetStyleBackgroundSize(_DOMImageParts[partIndex], right + "px", frameSize.height + "px");
+                if (![_backgroundColor isRepeatable]) {
+                    _DOMElement.style.backgroundSize = "100% 100%";
+                }
                 CPDOMDisplayServerSetStyleRightTop(_DOMImageParts[partIndex], NULL, 0.0, 0.0);
                 CPDOMDisplayServerSetStyleSize(_DOMImageParts[partIndex], right, frameSize.height);
             }
@@ -2503,7 +2513,9 @@ setBoundsOrigin:
         _DOMContentsElement.style.position = "absolute";
         _DOMContentsElement.style.visibility = "visible";
 
-        CPDOMDisplayServerSetSize(_DOMContentsElement, width, height);
+        var pixelRatio = window.devicePixelRatio;
+        CPDOMDisplayServerSetSize(_DOMContentsElement, width * pixelRatio, height * pixelRatio);
+        _DOMContentsElement.getContext('2d').scale(pixelRatio, pixelRatio);
 
         CPDOMDisplayServerSetStyleLeftTop(_DOMContentsElement, NULL, 0.0, 0.0);
         CPDOMDisplayServerSetStyleSize(_DOMContentsElement, width, height);

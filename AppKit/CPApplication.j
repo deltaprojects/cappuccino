@@ -90,7 +90,7 @@ var CPMainCibFile               = @"CPMainCibFile",
     CPWindow                    _lastMouseMoveWindow;
 
     CPArray                     _windows;
-    CPWindow                    _keyWindow;
+    CPWindow                    _keyWindow @accessors(property=keyWindow);
     CPWindow                    _mainWindow;
     CPWindow                    _previousKeyWindow;
     CPWindow                    _previousMainWindow;

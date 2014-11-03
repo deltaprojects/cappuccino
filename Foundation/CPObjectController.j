@@ -20,9 +20,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import <Foundation/CPDictionary.j>
-@import <Foundation/CPCountedSet.j>
-@import <Foundation/_CPCollectionKVCOperators.j>
+@import "CPDictionary.j"
+@import "CPCountedSet.j"
+@import "_CPCollectionKVCOperators.j"
 
 @import "CPController.j"
 @import "CPKeyValueBinding.j"

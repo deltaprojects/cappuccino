@@ -24,7 +24,7 @@
 @import <Foundation/CPNotificationCenter.j>
 
 @import "CPEvent.j"
-@import "CPKeyBinding.j"
+// @import "CPKeyBinding.j"
 
 @class CPWindow
 @class _CPMenuWindow

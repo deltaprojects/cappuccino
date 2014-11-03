@@ -27,8 +27,9 @@
 @import <Foundation/CPNotificationCenter.j>
 @import <Foundation/CPString.j>
 @import <Foundation/CPUserDefaults.j>
+@import <Foundation/CPController.j>
 
-@import "CPController.j"
+// @import "CPController.j"
 
 @global CPUserDefaultsDidChangeNotification
 

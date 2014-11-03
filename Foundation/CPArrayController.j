@@ -22,7 +22,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-@import <Foundation/CPIndexSet.j>
+@import "CPIndexSet.j"
 
 @import "CPObjectController.j"
 @import "CPKeyValueBinding.j"

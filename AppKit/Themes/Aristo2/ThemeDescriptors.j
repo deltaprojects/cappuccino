@@ -2079,7 +2079,7 @@ var themedButtonValues = nil,
 
     var themedSplitViewValues =
         [
-            [@"divider-thickness", 1.0],
+            [@"divider-thickness", 0.0],
             [@"pane-divider-thickness", 10.0],
             [@"pane-divider-color", [CPColor colorWithRed:165.0 / 255.0 green:165.0 / 255.0 blue:165.0 / 255.0 alpha:1.0]],
             [@"horizontal-divider-color", horizontalDividerColor],
@@ -2606,7 +2606,7 @@ var themedButtonValues = nil,
 {
     var HUDWindowView = [[_CPHUDWindowView alloc] initWithFrame:CGRectMake(0, 0, 200, 200) styleMask:CPHUDBackgroundWindowMask | CPClosableWindowMask],
         HUDBezelColor = PatternColor(
-            "HUD/window-bezel{position}.png",
+            "window-bezel{position}.png",
             {
                 positions: "full",
                 width: 5.0,

@@ -24,8 +24,9 @@
 @import <Foundation/CPDictionary.j>
 @import <Foundation/CPNotificationCenter.j>
 @import <Foundation/CPString.j>
+@import <Foundation/CPKeyValueBinding.j>
 
-@import "CPKeyValueBinding.j"
+// @import "CPKeyValueBinding.j"
 @import "CPMenuItem.j"
 
 @global CPApp

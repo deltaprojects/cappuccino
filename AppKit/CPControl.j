@@ -22,11 +22,12 @@
 
 @import <Foundation/CPFormatter.j>
 @import <Foundation/CPTimer.j>
+@import <Foundation/CPKeyValueBinding.j>
 
 @import "CPFont.j"
 @import "CPShadow.j"
 @import "CPView.j"
-@import "CPKeyValueBinding.j"
+// @import "CPKeyValueBinding.j"
 
 @global CPApp
 

@@ -26,7 +26,7 @@
 @import <AppKit/CPCibOutletConnector.j>
 @import <AppKit/CPCibRuntimeAttributesConnector.j>
 @import <AppKit/CPCibHelpConnector.j>
-@import <AppKit/CPKeyValueBinding.j>
+@import <Foundation/CPKeyValueBinding.j>
 
 NIB_CONNECTION_EQUIVALENCY_TABLE = {};
 

@@ -20,9 +20,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
+@import <Foundation/CPKeyValueBinding.j>
+
 @import "CGGeometry.j"
 @import "CPButton.j"
-@import "CPKeyValueBinding.j"
+// @import "CPKeyValueBinding.j"
 @import "CPMenu.j"
 @import "CPMenuItem.j"
 

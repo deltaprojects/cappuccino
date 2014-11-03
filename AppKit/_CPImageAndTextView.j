@@ -125,35 +125,56 @@ var _CPimageAndTextViewFrameSizeChangedFlag         = 1 << 0,
 
     _alignment = anAlignment;
 
-#if PLATFORM(DOM)
-    switch (_alignment)
-    {
-        case CPLeftTextAlignment:
-            _DOMElement.style.textAlign = "left";
-            break;
+// #if PLATFORM(DOM)
+//     switch (_alignment)
+//     {
+//         case CPLeftTextAlignment:
+//             _DOMElement.style.textAlign = "left";
+//             break;
 
-        case CPRightTextAlignment:
-            _DOMElement.style.textAlign = "right";
-            break;
+//         case CPRightTextAlignment:
+//             _DOMElement.style.textAlign = "right";
+//             break;
 
-        case CPCenterTextAlignment:
-            _DOMElement.style.textAlign = "center";
-            break;
+//         case CPCenterTextAlignment:
+//             _DOMElement.style.textAlign = "center";
+//             break;
 
-        case CPJustifiedTextAlignment:
-            _DOMElement.style.textAlign = "justify";
-            break;
+//         case CPJustifiedTextAlignment:
+//             _DOMElement.style.textAlign = "justify";
+//             break;
 
-        case CPNaturalTextAlignment:
-            _DOMElement.style.textAlign = "";
-            break;
-    }
-#endif
+//         case CPNaturalTextAlignment:
+//             _DOMElement.style.textAlign = "";
+//             break;
+//     }
+// #endif
 }
 
 - (CPTextAlignment)alignment
 {
     return _alignment;
+}
+
+- (CPString)cssAlignmentString
+{
+    switch (_alignment)
+    {
+        case CPLeftTextAlignment:
+            return"left";
+
+        case CPRightTextAlignment:
+            return "right";
+
+        case CPCenterTextAlignment:
+            return "center";
+
+        case CPJustifiedTextAlignment:
+            return "justify";
+
+        case CPNaturalTextAlignment:
+            return "";
+    }
 }
 
 - (void)setVerticalAlignment:(CPVerticalTextAlignment)anAlignment
@@ -423,6 +444,7 @@ var _CPimageAndTextViewFrameSizeChangedFlag         = 1 << 0,
             textStyle.whiteSpace = "pre";
             textStyle.zIndex = 200;
             textStyle.overflow = "hidden";
+            textStyle.textAlign = [self cssAlignmentString];
 
             _DOMElement.appendChild(_DOMTextElement);
             hasDOMTextElement = YES;
@@ -464,6 +486,7 @@ var _CPimageAndTextViewFrameSizeChangedFlag         = 1 << 0,
             shadowStyle.wordWrap = textStyle.wordWrap;
             shadowStyle.color = [_textShadowColor cssString];
             shadowStyle.lineHeight = [font defaultLineHeightForFont] + "px";
+            shadowStyle.textAlign = [self cssAlignmentString];
 
             shadowStyle.zIndex = 150;
             shadowStyle.textOverflow = textStyle.textOverflow;
@@ -691,7 +714,7 @@ var _CPimageAndTextViewFrameSizeChangedFlag         = 1 << 0,
             imageStyle.top = FLOOR(centerY - imageHeight / 2.0) + "px";
             imageStyle.left = FLOOR(size.width - imageWidth) + "px";
 
-            textRect.size.width -= imageWidth + _imageOffset;
+            textRect.size.width -= imageWidth + _imageOffset + 2;
         }
         else if (_imagePosition === CPImageOnly || _imagePosition == CPImageOverlaps)
         {

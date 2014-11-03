@@ -267,6 +267,31 @@ var CPObjectAccessorsForClassKey = @"$CPObjectAccessorsForClassKey",
                           userInfo:@{ CPTargetObjectUserInfoKey: self, CPUnknownUserInfoKey: aKey }] raise];
 }
 
+- (BOOL)validateValue:(id)aValueRef forKey:(CPString)aKey error:(CPErrorRef)outError
+{
+    var capitalizedKey = aKey.charAt(0).toUpperCase() + aKey.substr(1),
+        validationSelector = CPSelectorFromString("validate" + capitalizedKey + ":error:");
+
+    if (![self respondsToSelector:validationSelector])
+        return YES;
+
+    return objj_msgSend(self, validationSelector, aValueRef, outError);
+}
+
+- (BOOL)validateValue:(id)aValueRef forKeyPath:(CPString)aKeyPath error:(CPErrorRef)outError
+{
+    var firstDotIndex = aKeyPath.indexOf(".");
+
+    if (firstDotIndex === CPNotFound)
+        return [self validateValue:aValueRef forKey:aKeyPath error:outError];
+
+    var firstKeyComponent = aKeyPath.substring(0, firstDotIndex),
+        remainingKeyPath = aKeyPath.substring(firstDotIndex + 1),
+        value = [self valueForKey:firstKeyComponent];
+
+    return [value validateValue:aValueRef forKeyPath:remainingKeyPath error:outError];
+}
+
 - (CPString)_objectDescription
 {
     return "<" + [self className] + " 0x" + [CPString stringWithHash:[self UID]] + ">";

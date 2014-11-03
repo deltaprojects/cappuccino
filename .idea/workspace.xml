@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8a0dc6b0-46e8-4574-8063-6376a7d07e0a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppKit/CPArrayController.j" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppKit/CPController.j" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppKit/CPKeyValueBinding.j" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AppKit/CPObjectController.j" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/AppKit.j" afterPath="$PROJECT_DIR$/AppKit/AppKit.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Artwork/Aristo 11-06-07.psd" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Artwork/Aristo 11-06-07.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/CPApplication.j" afterPath="$PROJECT_DIR$/AppKit/CPApplication.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/CPColor.j" afterPath="$PROJECT_DIR$/AppKit/CPColor.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/CPControl.j" afterPath="$PROJECT_DIR$/AppKit/CPControl.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/CPDictionaryController.j" afterPath="$PROJECT_DIR$/AppKit/CPDictionaryController.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/CPFontManager.j" afterPath="$PROJECT_DIR$/AppKit/CPFontManager.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Foundation/CPKeyValueCoding.j" afterPath="$PROJECT_DIR$/Foundation/CPKeyValueCoding.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/CPMenu/CPMenu.j" afterPath="$PROJECT_DIR$/AppKit/CPMenu/CPMenu.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Platform/DOM/CPPlatformString.j" afterPath="$PROJECT_DIR$/AppKit/Platform/DOM/CPPlatformString.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Platform/DOM/CPPlatformWindow+DOM.j" afterPath="$PROJECT_DIR$/AppKit/Platform/DOM/CPPlatformWindow+DOM.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/CPPopUpButton.j" afterPath="$PROJECT_DIR$/AppKit/CPPopUpButton.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/Manual/CPPopUpButtonBindings/CPPopUpButton.j" afterPath="$PROJECT_DIR$/Tests/Manual/CPPopUpButtonBindings/CPPopUpButton.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/CPUserDefaultsController.j" afterPath="$PROJECT_DIR$/AppKit/CPUserDefaultsController.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/CPView.j" afterPath="$PROJECT_DIR$/AppKit/CPView.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Foundation/Foundation.j" afterPath="$PROJECT_DIR$/Foundation/Foundation.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tools/nib2cib/NSArrayController.j" afterPath="$PROJECT_DIR$/Tools/nib2cib/NSArrayController.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tools/nib2cib/NSNibConnector.j" afterPath="$PROJECT_DIR$/Tools/nib2cib/NSNibConnector.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tools/nib2cib/NSObjectController.j" afterPath="$PROJECT_DIR$/Tools/nib2cib/NSObjectController.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/ThemeDescriptors.j" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/ThemeDescriptors.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/_CPImageAndTextView.j" afterPath="$PROJECT_DIR$/AppKit/_CPImageAndTextView.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/CPMenu/_CPMenuManager.j" afterPath="$PROJECT_DIR$/AppKit/CPMenu/_CPMenuManager.j" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/alert-error.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/alert-error.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/alert-help-pressed.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/alert-help-pressed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/alert-help.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/alert-help.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/alert-info.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/alert-info.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/alert-warning.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/alert-warning.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-highlighted-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-highlighted-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-highlighted-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-highlighted-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-highlighted-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-highlighted-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-highlighted-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-highlighted-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-highlighted-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-highlighted-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-highlighted-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-highlighted-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-highlighted-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-highlighted-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-highlighted-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-highlighted-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-highlighted-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-highlighted-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/button-bezel-rounded-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/button-bezel-rounded-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/check-box-image-highlighted.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/check-box-image-highlighted.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/check-box-image-mixed-highlighted.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/check-box-image-mixed-highlighted.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/check-box-image-mixed.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/check-box-image-mixed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/check-box-image-selected-highlighted.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/check-box-image-selected-highlighted.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/check-box-image-selected.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/check-box-image-selected.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/check-box-image.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/check-box-image.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-focused-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-focused-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-focused-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-focused-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-focused-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-focused-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-focused-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-focused-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-focused-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-focused-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-focused-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-focused-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-no-border-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/combobox-bezel-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-highlighted-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-highlighted-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-highlighted-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-highlighted-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-highlighted-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-highlighted-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-highlighted-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-highlighted-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-highlighted-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-highlighted-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-highlighted-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-highlighted-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-highlighted-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-highlighted-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-highlighted-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-highlighted-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-highlighted-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-highlighted-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/default-button-bezel-rounded-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/default-button-bezel-rounded-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/horizontal-track-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/horizontal-track-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/horizontal-track-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/horizontal-track-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/horizontal-track-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/horizontal-track-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/horizontal-track-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/horizontal-track-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/horizontal-track-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/horizontal-track-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/horizontal-track-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/horizontal-track-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/knob-disabled.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/knob-disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/knob-highlighted.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/knob-highlighted.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/knob.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/knob.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-bar-window-background-selected.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-bar-window-background-selected.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-bar-window-background.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-bar-window-background.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-item-on-state.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-item-on-state.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-1.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-3.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-4.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-5.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-7.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-more-above.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-more-above.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-more-below.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-more-below.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-rounded-0.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-rounded-0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-rounded-2.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-rounded-2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-rounded-6.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-rounded-6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-rounded-8.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/menu-window-rounded-8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-disabled-right-pullsdown.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-disabled-right-pullsdown.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-right-pullsdown.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-right-pullsdown.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/popup-bezel-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-bar-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-bar-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-bar-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-bar-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-bar-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-bar-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-bezel-border-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-bezel-border-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-bezel-border-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-bezel-border-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-bezel-border-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-bezel-border-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-indeterminate-bar-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-indeterminate-bar-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-indeterminate-bar-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-indeterminate-bar-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-indeterminate-bar-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/progress-indicator-indeterminate-bar-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/pulldown-bezel-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/pulldown-bezel-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/pulldown-bezel-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/pulldown-bezel-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/pulldown-bezel-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/pulldown-bezel-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/pulldown-bezel-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/pulldown-bezel-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/pulldown-bezel-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/pulldown-bezel-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/pulldown-bezel-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/pulldown-bezel-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/radio-image-highlighted.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/radio-image-highlighted.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/radio-image-selected-highlighted.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/radio-image-selected-highlighted.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/radio-image-selected.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/radio-image-selected.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/radio-image.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/radio-image.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-down-arrow-disabled.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-down-arrow-disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-down-arrow-highlighted.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-down-arrow-highlighted.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-down-arrow.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-down-arrow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-horizontal-knob-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-horizontal-knob-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-horizontal-knob-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-horizontal-knob-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-horizontal-knob-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-horizontal-knob-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-horizontal-track-disabled.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-horizontal-track-disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-horizontal-track-disabled.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-horizontal-track-disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-horizontal-track.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-horizontal-track.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-horizontal-track.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-horizontal-track.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-left-arrow-disabled.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-left-arrow-disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-left-arrow-highlighted.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-left-arrow-highlighted.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-left-arrow.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-left-arrow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-horizontal-knob-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-horizontal-knob-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-horizontal-knob-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-horizontal-knob-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-horizontal-knob-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-horizontal-knob-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-horizontal-track-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-horizontal-track-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-horizontal-track-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-horizontal-track-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-horizontal-track-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-horizontal-track-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-vertical-knob-bottom.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-vertical-knob-bottom.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-vertical-knob-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-vertical-knob-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-vertical-knob-top.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-vertical-knob-top.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-vertical-track-bottom.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-vertical-track-bottom.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-vertical-track-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-vertical-track-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-vertical-track-top.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/scroller-legacy-vertical-track-top.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-right-arrow-disabled.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-right-arrow-disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-right-arrow-highlighted.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-right-arrow-highlighted.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-right-arrow.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-right-arrow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-up-arrow-disabled.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-up-arrow-disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-up-arrow-highlighted.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-up-arrow-highlighted.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-up-arrow.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-up-arrow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-vertical-knob-bottom.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-vertical-knob-bottom.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-vertical-knob-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-vertical-knob-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-vertical-knob-top.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-vertical-knob-top.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-vertical-track-disabled.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-vertical-track-disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-vertical-track.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/scroller-vertical-track.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-disabled-divider.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-disabled-divider.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-disabled-divider.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-disabled-divider.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-divider.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-divider.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-highlighted-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-highlighted-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-disabled-divider.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-disabled-divider.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-highlighted-disabled-divider.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-highlighted-disabled-divider.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-highlighted-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-highlighted-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-highlighted-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/HUD/segmented-control-bezel-highlighted-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-divider.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-divider.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-highlighted-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-pushed-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-pushed-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-pushed-highlighted-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-pushed-highlighted-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-pushed-highlighted-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-pushed-highlighted-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-pushed-highlighted-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-pushed-highlighted-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-pushed-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-pushed-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-pushed-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-pushed-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/segmented-control-bezel-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/slider-circular-bezel.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/slider-circular-bezel.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/slider-circular-disabled-bezel.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/slider-circular-disabled-bezel.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/slider-circular-disabled-knob.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/slider-circular-disabled-knob.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/slider-circular-knob.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/slider-circular-knob.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/spinner.gif" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/spinner.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-disabled-down-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-disabled-down-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-disabled-down-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-disabled-down-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-disabled-down-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-disabled-down-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-disabled-up-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-disabled-up-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-disabled-up-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-disabled-up-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-disabled-up-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-disabled-up-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-down-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-down-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-down-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-down-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-down-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-down-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-highlighted-down-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-highlighted-down-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-highlighted-down-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-highlighted-down-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-highlighted-down-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-highlighted-down-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-highlighted-up-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-highlighted-up-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-highlighted-up-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-highlighted-up-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-highlighted-up-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-highlighted-up-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-up-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-up-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-up-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-up-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-up-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/stepper-bezel-big-up-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/tableview-headerview-ascending.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/tableview-headerview-ascending.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/tableview-headerview-descending.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/tableview-headerview-descending.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/tableview-headerview.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/tableview-headerview.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-focused-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-focused-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-focused-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-focused-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-focused-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-focused-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-rounded-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-0.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-1.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-2.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-3.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-4.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-5.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-6.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-7.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-8.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-0.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-1.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-2.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-3.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-4.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-5.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-6.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-7.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-8.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-disabled-8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-0.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-1.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-2.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-3.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-4.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-5.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-6.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-7.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-8.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/textfield-bezel-square-focused-8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-close-highlighted.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-close-highlighted.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-close.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-close.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-disabled-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-disabled-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-disabled-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-disabled-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-highlighted-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-highlighted-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-highlighted-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-highlighted-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-highlighted-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-highlighted-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/token-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/vertical-track-bottom.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/vertical-track-bottom.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/vertical-track-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/vertical-track-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/vertical-track-disabled-bottom.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/vertical-track-disabled-bottom.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/vertical-track-disabled-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/vertical-track-disabled-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/vertical-track-disabled-top.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/vertical-track-disabled-top.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/vertical-track-top.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/vertical-track-top.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-bottom-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-bottom-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-bottom-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-bottom-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-bottom-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-bottom-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-center-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-center-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-center-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-center-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-center-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-center-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-top-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-top-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-top-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-top-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-top-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-bezel-top-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-bottom-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-bottom-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-bottom-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-bottom-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-bottom-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-bottom-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-center-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-center-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-center-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-center-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-center-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-center-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-top-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-top-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-top-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-top-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-top-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-popup-top-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-bottom-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-bottom-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-bottom-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-bottom-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-bottom-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-bottom-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-center-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-center-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-center-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-center-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-center-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-center-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-divider-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-divider-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-divider-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-divider-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-divider-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-divider-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-head-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-head-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-head-inactive-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-head-inactive-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-head-inactive-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-head-inactive-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-head-inactive-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-head-inactive-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-head-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-head-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-head-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-head-right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-top-center.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-top-center.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-top-left.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-top-left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-top-right.png" afterPath="$PROJECT_DIR$/AppKit/Themes/Aristo2/Resources/window-standard-top-right.png" />
+    </list>
+    <ignored path="cappuccino.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="cappuccino" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="CPTextField.j" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AppKit/CPTextField.j">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="19669" max-vertical-offset="30045">
+              <caret line="1328" column="1" selection-start-line="1328" selection-start-column="1" selection-end-line="1328" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThemeDescriptors.j" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AppKit/Themes/Aristo2/ThemeDescriptors.j">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2370" max-vertical-offset="47355">
+              <caret line="185" column="28" selection-start-line="121" selection-start-column="5" selection-end-line="139" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CPControl.j" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AppKit/CPControl.j">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44210526" vertical-offset="0" max-vertical-offset="17265">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="4" />
+    <option name="y" value="22" />
+    <option name="width" value="1436" />
+    <option name="height" value="878" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cappuccino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cappuccino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cappuccino" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cappuccino" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cappuccino" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppKit" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="136" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="138" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="141" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="936" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="136" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="138" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="141" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="936" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <list size="0" />
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a0dc6b0-46e8-4574-8063-6376a7d07e0a" name="Default" comment="" />
+      <created>1411544453043</created>
+      <updated>1411544453043</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="4" y="22" width="1436" height="878" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34351146" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.8595041" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/AppKit/CPTextField.j">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="19669" max-vertical-offset="30045">
+          <caret line="1328" column="1" selection-start-line="1328" selection-start-column="1" selection-end-line="1328" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppKit/Themes/Aristo2/ThemeDescriptors.j">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2370" max-vertical-offset="47355">
+          <caret line="185" column="28" selection-start-line="121" selection-start-column="5" selection-end-line="139" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppKit/CPControl.j">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44210526" vertical-offset="0" max-vertical-offset="17265">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

@@ -337,6 +337,7 @@ var PreventScroll = true;
     _DOMScrollingElement.style.opacity = "0";
     _DOMScrollingElement.style.filter = "alpha(opacity=0)";
     _DOMScrollingElement.className = "cpdontremove";
+    _DOMScrollingElement.id = "cpscrolldiv";
     _DOMBodyElement.appendChild(_DOMScrollingElement);
 
     var _DOMInnerScrollingElement = theDocument.createElement("div");
@@ -853,6 +854,11 @@ var PreventScroll = true;
         aDOMEvent.preventDefault();
     }
 
+    // if (CPBrowserIsOperatingSystem(CPMacOperatingSystem)) {
+    //     [self scrollEventForOSX:aDOMEvent];
+    //     return;
+    // }
+
     if (_hideDOMScrollingElementTimeout)
     {
         clearTimeout(_hideDOMScrollingElementTimeout);
@@ -972,6 +978,95 @@ var PreventScroll = true;
         _DOMScrollingElement.style.visibility = "hidden";
     }, 300);
 }
+
+- (void)scrollEventForOSX:(DOMEvent)aDOMEvent
+{
+    if(!aDOMEvent)
+        aDOMEvent = window.event;
+
+    var location = nil;
+    if (CPFeatureIsCompatible(CPJavaScriptMouseWheelValues_8_15))
+    {
+        var x = aDOMEvent._offsetX || 0.0,
+            y = aDOMEvent._offsetY || 0.0,
+            element = aDOMEvent.target;
+
+        while (element.nodeType !== 1)
+            element = element.parentNode;
+
+        if (element.offsetParent)
+        {
+            do
+            {
+                x += element.offsetLeft;
+                y += element.offsetTop;
+
+            } while (element = element.offsetParent);
+        }
+
+        location = CGPointMake((x + ((aDOMEvent.clientX - 8) / 15)), (y + ((aDOMEvent.clientY - 8) / 15)));
+    }
+    else if (aDOMEvent._overrideLocation)
+        location = aDOMEvent._overrideLocation;
+    else
+        location = CGPointMake(aDOMEvent.clientX, aDOMEvent.clientY);
+
+    var deltaX = 0.0,
+        deltaY = 0.0,
+        windowNumber = 0,
+        timestamp = aDOMEvent.timeStamp ? aDOMEvent.timeStamp : new Date(),
+        modifierFlags = (aDOMEvent.shiftKey ? CPShiftKeyMask : 0) |
+                        (aDOMEvent.ctrlKey ? CPControlKeyMask : 0) |
+                        (aDOMEvent.altKey ? CPAlternateKeyMask : 0) |
+                        (aDOMEvent.metaKey ? CPCommandKeyMask : 0);
+
+    StopDOMEventPropagation = YES;
+
+    var theWindow = [self hitTest:location];
+
+    if (!theWindow)
+        return;
+
+    var windowNumber = [theWindow windowNumber];
+
+    location = [theWindow convertBridgeToBase:location];
+
+    if(typeof aDOMEvent.wheelDeltaX != "undefined")
+    {
+        deltaX = aDOMEvent.wheelDeltaX / 3.0;
+        deltaY = aDOMEvent.wheelDeltaY / 3.0;
+    }
+
+    else if (aDOMEvent.wheelDelta)
+        deltaY = aDOMEvent.wheelDelta / 3.0;
+
+    else if (aDOMEvent.detail)
+        deltaY = -aDOMEvent.detail; // / 3.0;
+
+    else
+        return;
+
+    if(!CPFeatureIsCompatible(CPJavaScriptNegativeMouseWheelValues))
+    {
+        deltaX = -deltaX;
+        deltaY = -deltaY;
+    }
+
+    var event = [CPEvent mouseEventWithType:CPScrollWheel location:location modifierFlags:modifierFlags
+            timestamp:timestamp windowNumber:windowNumber context:nil eventNumber:-1 clickCount:1 pressure:0 ];
+
+    event._DOMEvent = aDOMEvent;
+    event._deltaX = deltaX;
+    event._deltaY = deltaY;
+
+    [CPApp sendEvent:event];
+
+    if (StopDOMEventPropagation)
+        _CPDOMEventStop(aDOMEvent, self);
+
+    [[CPRunLoop currentRunLoop] limitDateForMode:CPDefaultRunLoopMode];
+}
+
 
 - (void)resizeEvent:(DOMEvent)aDOMEvent
 {

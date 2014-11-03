@@ -256,7 +256,8 @@ var _CPFontDetectSpan,
         "Tahoma", "Techno", "Tempus Sans ITC", "Terminal", "Textile", "Times", "Times New Roman", "Tiranti Solid LET", "Trebuchet MS",
         /* "Tw Cen MT", "Tw Cen MT Condensed", "Tw Cen MT Condensed Extra Bold", "URW Antiqua T", "URW Bookman L", "URW Chancery L", "URW Gothic L", "URW Palladio L", "Univers", "University Roman LET", "Utopia", */
         "Verdana", "Verdana Ref", /* "Victorian LET", "Viner Hand ITC", "Vivaldi", "Vladimir Script", "Vrinda", "Weltron Urban", "Westwood LET", "Wide Latin", "Zapf Chancery", */
-        "Zapfino"];
+        "Zapfino",
+        "FontAwesome"/* Icon Font*/];
 
 // Compare against the reference fonts. Return true if it produces a different size than at least one of them.
 var _CPFontDetectFontAvailable = function(font)

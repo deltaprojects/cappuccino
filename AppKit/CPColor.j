@@ -84,6 +84,18 @@ var cachedBlackColor,
 
     CPImage     _patternImage;
     CPString    _cssString;
+    BOOL        _isRepeatable;
+}
+
+- (BOOL)isRepeatable
+{
+    return _isRepeatable;
+}
+
+- (CPColor)setIsRepeatable:(BOOL)aFlag
+{
+    _isRepeatable = aFlag;
+    return self;
 }
 
 /*!
@@ -823,7 +835,8 @@ url("data:image/png;base64,BASE64ENCODEDDATA")  // if there is a pattern image
 
 /// @cond IGNORE
 var CPColorComponentsKey    = @"CPColorComponentsKey",
-    CPColorPatternImageKey  = @"CPColorPatternImageKey";
+    CPColorPatternImageKey  = @"CPColorPatternImageKey",
+    CPColorIsRepeatableKey = @"CPColorIsRepeatableKey";
 /// @endcond
 
 @implementation CPColor (CPCoding)
@@ -834,6 +847,11 @@ var CPColorComponentsKey    = @"CPColorComponentsKey",
 */
 - (id)initWithCoder:(CPCoder)aCoder
 {
+    if ([aCoder containsValueForKey:CPColorIsRepeatableKey])
+        _isRepeatable = [aCoder decodeBoolForKey:CPColorIsRepeatableKey];
+    else
+        _isRepeatable = NO;
+
     if ([aCoder containsValueForKey:CPColorPatternImageKey])
         return [self _initWithPatternImage:[aCoder decodeObjectForKey:CPColorPatternImageKey]];
 
@@ -850,6 +868,8 @@ var CPColorComponentsKey    = @"CPColorComponentsKey",
         [aCoder encodeObject:_patternImage forKey:CPColorPatternImageKey];
     else
         [aCoder encodeObject:_components forKey:CPColorComponentsKey];
+
+    [aCoder encodeBool:_isRepeatable forKey:CPColorIsRepeatableKey];
 }
 
 @end
