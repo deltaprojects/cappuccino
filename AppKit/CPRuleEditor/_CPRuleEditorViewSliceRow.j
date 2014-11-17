@@ -123,7 +123,7 @@
     var title   = [[itemsArray objectAtIndex:index] title],
         font    = [_ruleEditor font],
         width   = [title sizeWithFont:font].width + 20,
-        rect    = CGRectMake(0, 0, (width - width % 40) + 80, [_ruleEditor rowHeight]),
+        rect    = CGRectMake(0, 4, (width - width % 40) + 80, [_ruleEditor rowHeight]-8),
         popup   = [[CPPopUpButton alloc] initWithFrame:rect];
 
     [popup setValue:font forThemeAttribute:@"font"];
