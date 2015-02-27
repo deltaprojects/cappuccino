@@ -362,7 +362,7 @@ var MethodDef = function(name, types)
 
 var currentCompilerFlags = "";
 
-var reservedIdentifiers = exports.acorn.makePredicate("self _cmd undefined localStorage arguments");
+var reservedIdentifiers = exports.acorn.makePredicate("self _cmd undefined localStorage arguments React");
 
 var wordPrefixOperators = exports.acorn.makePredicate("delete in instanceof new typeof void");
 

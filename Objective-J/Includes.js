@@ -28,6 +28,8 @@
 
 #define GLOBAL(name) name
 
+#include "jsx.js"
+
 #include "OldBrowserCompatibility.js"
 #include "DebugOptions.js"
 #include "json2.js"

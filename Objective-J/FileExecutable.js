@@ -38,6 +38,11 @@ function FileExecutable(/*CFURL|String*/ aURL, /*Dictionary*/ aFilenameTranslate
         executable = NULL,
         extension = aURL.pathExtension().toLowerCase();
 
+    if (extension === "jx") {
+        extension = "j";
+        fileContents = transform(fileContents);
+    }
+
     if (fileContents.match(/^@STATIC;/))
         executable = decompile(fileContents, aURL);
     else if ((extension === "j" || !extension) && !fileContents.match(/^{/))
