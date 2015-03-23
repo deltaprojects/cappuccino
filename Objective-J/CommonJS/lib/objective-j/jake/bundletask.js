@@ -888,13 +888,15 @@ BundleTask.prototype.defineSourceTasks = function()
 
                 var compile;
                 // if this file doesn't exist or isn't a .j file, don't preprocess it.
-                if (FILE.extension(aFilename).toLowerCase() !== ".j")
+                if (FILE.extension(aFilename).toLowerCase() !== ".j" && FILE.extension(aFilename).toLowerCase() !== ".jx")
                 {
                     TERM.stream.write("Including [\0blue(" + anEnvironment + "\0)] \0purple(" + aFilename + "\0)").flush();
                     var compiled = FILE.read(aFilename, { charset:"UTF-8" });
                 }
                 else
                 {
+                    TERM.stream.write("Compiling [\0blue(" + anEnvironment + "\0)] \0purple(" + aFilename + "\0)").flush();
+
                     var translatedFilename = translateFilenameToPath[aFilename] ? translateFilenameToPath[aFilename] : aFilename,
                         otherwayTranslatedFilename = otherwayTranslateFilenameToPath[aFilename] ? otherwayTranslateFilenameToPath[aFilename] : aFilename,
                         theTranslatedFilename = otherwayTranslatedFilename ? otherwayTranslatedFilename : translatedFilename,
@@ -906,7 +908,6 @@ BundleTask.prototype.defineSourceTasks = function()
                     // Here we tell the CFBundle to load frameworks for the current build enviroment and not the enviroment that is running
                     CFBundle.environments = function() {return [anEnvironment.name(), "ObjJ"]};
                     ObjectiveJ.make_narwhal_factory(absolutePath, basePath, translateFilenameToPath)(require, e, module, system, print);
-                    TERM.stream.write("Compiling [\0blue(" + anEnvironment + "\0)] \0purple(" + aFilename + "\0)").flush();
 
                     var otherwayTranslatedFilename = otherwayTranslateFilenameToPath[aFilename] ? otherwayTranslateFilenameToPath[aFilename] : aFilename,
                         translatedFilename = translateFilenameToPath[aFilename] ? translateFilenameToPath[aFilename] : aFilename,

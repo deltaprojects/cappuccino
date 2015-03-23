@@ -274,12 +274,12 @@ CFHTTPRequest.prototype.removeEventListener = function(/*String*/ anEventName, /
     this._eventDispatcher.removeEventListener(anEventName, anEventListener);
 };
 
-CFHTTPRequest.prototype.setWithCredentials = function(/*Boolean*/ willSendWithCredentials) 
+CFHTTPRequest.prototype.setWithCredentials = function(/*Boolean*/ willSendWithCredentials)
 {
     this._nativeRequest.withCredentials = willSendWithCredentials;
 };
 
-CFHTTPRequest.prototype.getWithCredentials = function() 
+CFHTTPRequest.prototype.getWithCredentials = function()
 {
     return this._nativeRequest.withCredentials;
 };
@@ -315,7 +315,7 @@ function FileRequest(/*CFURL*/ aURL, onsuccess, onfailure, onprogress)
         request.overrideMimeType("text/xml");
 
 #if COMMONJS
-    if (aURL.pathExtension().toLowerCase() === "j")
+    if (aURL.pathExtension().toLowerCase() === "j" || aURL.pathExtension().toLowerCase() === "jx")
     {
         var aFilePath = aURL.toString().substring(5),
             OS = require("os"),
