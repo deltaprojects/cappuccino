@@ -369,7 +369,7 @@ var wordPrefixOperators = exports.acorn.makePredicate("delete in instanceof new 
 var isLogicalBinary = exports.acorn.makePredicate("LogicalExpression BinaryExpression");
 var isInInstanceof = exports.acorn.makePredicate("in instanceof");
 
-var ObjJAcornCompiler = function(/*String*/ aString, /*CFURL*/ aURL, /*unsigned*/ flags, /*unsigned*/ pass, /* Dictionary */ classDefs, /* Dictionary */ protocolDefs)
+var ObjJAcornCompiler = function(/*String*/ aString, /*CFURL*/ aURL, /*unsigned*/ flags, /*unsigned*/ pass, /* Dictionary */ classDefs, /* Dictionary */ protocolDefs, tokens)
 {
     this.source = aString;
     this.URL = new CFURL(aURL);
@@ -379,20 +379,24 @@ var ObjJAcornCompiler = function(/*String*/ aString, /*CFURL*/ aURL, /*unsigned*
     this.cmBuffer = null;
     this.warnings = [];
 
-    try {
-        this.tokens = exports.acorn.parse(aString);
-    }
-    catch (e) {
-        if (e.lineStart != null)
-        {
-            var message = this.prettifyMessage(e, "ERROR");
-#ifdef BROWSER
-            console.log(message);
-#else
-            print(message);
-#endif
+    if (tokens) {
+        this.tokens = tokens;
+    } else {
+        try {
+            this.tokens = exports.acorn.parse(aString);
         }
-        throw e;
+        catch (e) {
+            if (e.lineStart != null)
+            {
+                var message = this.prettifyMessage(e, "ERROR");
+#ifdef BROWSER
+                console.log(message);
+#else
+                print(message);
+#endif
+            }
+            throw e;
+        }
     }
 
     this.dependencies = [];
@@ -413,6 +417,12 @@ exports.ObjJAcornCompiler.compileToExecutable = function(/*String*/ aString, /*C
 {
     ObjJAcornCompiler.currentCompileFile = aURL;
     return new ObjJAcornCompiler(aString, aURL, flags, 2).executable();
+}
+
+exports.ObjJAcornCompiler.compileToExecutableTokens = function(tokens, /*CFURL*/ aURL, /*unsigned*/ flags)
+{
+    ObjJAcornCompiler.currentCompileFile = aURL;
+    return new ObjJAcornCompiler(null, aURL, flags, 2, null, null, tokens).executable();
 }
 
 exports.ObjJAcornCompiler.compileToIMBuffer = function(/*String*/ aString, /*CFURL*/ aURL, /*unsigned*/ flags, classDefs, protocolDefs)

@@ -8,7 +8,7 @@ var FILE = require("file"),
     jake = require("jake"),
     stream = require("narwhal/term").stream;
 
-var subprojects = ["Objective-J", "CommonJS", "Foundation", "AppKit", "Tools"];
+var subprojects = ["Objective-J", "CommonJS", "Foundation", "AppKit"/*, "Tools"*/];
 
 ["build", "clean", "clobber"].forEach(function(aTaskName)
 {
@@ -79,19 +79,19 @@ task ("clean-sprites", function()
     });
 });
 
-task ("clobber-theme", function()
-{
-    var f = new FileList(FILE.join(SYSTEM.env.CAPP_BUILD, "**/Aristo.blend"), FILE.join(SYSTEM.env.CAPP_BUILD, "**/Aristo2.blend")),
-        paths = f.items();
+// task ("clobber-theme", function()
+// {
+//     var f = new FileList(FILE.join(SYSTEM.env.CAPP_BUILD, "**/Aristo.blend"), FILE.join(SYSTEM.env.CAPP_BUILD, "**/Aristo2.blend")),
+//         paths = f.items();
 
-    f = new FileList(FILE.join(SYSTEM.env.CAPP_BUILD, "Aristo.build"), FILE.join(SYSTEM.env.CAPP_BUILD, "Aristo2.build"));
-    paths = paths.concat(f.items());
+//     f = new FileList(FILE.join(SYSTEM.env.CAPP_BUILD, "Aristo.build"), FILE.join(SYSTEM.env.CAPP_BUILD, "Aristo2.build"));
+//     paths = paths.concat(f.items());
 
-    paths.forEach(function(path)
-    {
-        rm_rf(path);
-    });
-});
+//     paths.forEach(function(path)
+//     {
+//         rm_rf(path);
+//     });
+// });
 
 // Documentation
 

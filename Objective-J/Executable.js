@@ -141,6 +141,25 @@ Executable.prototype.toMarkedString = function()
 
     var code = this.code();
 
+    if (code) {
+        var OS = require("os"),
+            uglify = OS.popen("uglifyjs --mangle --compress --enclose", { charset: "UTF-8" }),
+            chunk,
+            fileContents = "";
+
+        uglify.stdin.write(code).close();
+
+        while (chunk = uglify.stdout.read())
+            fileContents += chunk;
+
+        if (fileContents.length == 0) {
+            print("FAILED TO COMPRESS: " + code);
+        } else {
+            code = fileContents.replace(/^\s*!function\s*\(\s*\)\s*{|}\(\)\s*;?\s*$/g, "");
+        }
+    }
+
+
     return markedString + MARKER_TEXT + ";" + code.length + ";" + code;
 };
 #endif
@@ -179,6 +198,10 @@ Executable.prototype.execute = function()
 
     var result = this._function.apply(global, this.functionArguments());
 
+    if (this._storedCode) {
+        result = this._storedCode;
+    }
+
     CONTEXT_BUNDLE = oldContextBundle;
 
     return result;
@@ -188,7 +211,7 @@ DISPLAY_NAME(Executable.prototype.execute);
 
 Executable.prototype.code = function()
 {
-    return this._code;
+    return this._storedCode || this._code;
 };
 
 DISPLAY_NAME(Executable.prototype.code);
@@ -196,6 +219,59 @@ DISPLAY_NAME(Executable.prototype.code);
 Executable.prototype.setCode = function(code)
 {
     this._code = code;
+
+    var isBrowser = window.encodeURIComponent;
+    if (!isBrowser) {
+        this._storedCode = code;
+
+        walk = ObjectiveJ.acorn.walk;
+        ast = ObjectiveJ.acorn.parse(code);
+        walker = walk.make({
+          CallExpression: function(node, st, c) {
+            if (
+              node.callee.name == "objj_executeFile" ||
+              node.callee.name == "objj_getClass" ||
+              node.callee.name == "objj_registerClassPair" ||
+              node.callee.name == "class_addIvars" ||
+              node.callee.name == "objj_allocateClassPair" ||
+              node.callee.name == "objj_allocateProtocol" ||
+              node.callee.name == "objj_registerProtocol" ||
+              node.callee.name == "protocol_addMethodDescriptions" ||
+              node.callee.name == "objj_getProtocol"
+              ) {
+              walk.CallExpression(node, st, c);
+            } else {
+              node.type = "Literal";
+              node.value = null;
+              node.raw = "___dummy___";
+            }
+          },
+          MemberExpression: function(node, st, c) {
+            node.type = "Literal";
+            node.value = null;
+            node.raw = "___dummy___";
+          },
+          FunctionExpression: function(node, st, c) {
+            node.body.type = "BlockStatement";
+            node.body.body = [];
+          },
+          IfStatement: function(node, st, c) {
+            node.test.type = "Literal";
+            node.test.value = null;
+            node.test.raw = "false";
+
+            node.consequent.type === "EmptyStatement";
+            if (node.alternate) node.alternate.type === "EmptyStatement";
+          },
+          SequenceExpression: function(node, st, c) {
+            walk.SequenceExpression(node, st, c);
+          }
+        })
+        ObjectiveJ.acorn.walk.recursive(ast, {}, walker, {})
+        code = this._code = ObjectiveJ.ObjJAcornCompiler.compileToExecutableTokens(ast, "<url>", 0).code()
+
+        code = "var ___dummy___ = (function(){});" + code;
+    }
 
     var parameters = this.functionParameters().join(",");
 
