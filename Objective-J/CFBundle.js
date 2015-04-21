@@ -413,6 +413,37 @@ function loadExecutableAndResources(/*Bundle*/ aBundle, /*BOOL*/ shouldExecute)
     }
 }
 
+var compilingBundles = {};
+
+CFBundle.compileBundle = function(name, f) {
+    var currentBundle = compilingBundles[name];
+    if (!currentBundle) {
+        throw new Error("Could not find bundle while compiling " + name);
+    }
+
+    var bundleURL = currentBundle.bundleURL();
+
+    var deps = f(
+        objj_getClass,
+        objj_registerClassPair,
+        class_addIvars,
+        class_addMethods,
+        objj_allocateClassPair,
+        objj_allocateProtocol,
+        objj_registerProtocol,
+        objj_getProtocol
+    );
+    for (var name in deps) {
+        if (deps.hasOwnProperty(name) && name != "null") {
+            var fileURL = new CFURL(name, bundleURL),
+                parent = StaticResource.resourceAtURL(new CFURL(".", fileURL), YES);
+
+            var file = new StaticResource(fileURL, parent, NO, YES, null, deps[name][0], deps[name][1]);
+            file.write("<thunk>");
+        }
+    }
+}
+
 function loadExecutableForBundle(/*Bundle*/ aBundle, success, failure, progress)
 {
     var executableURL = aBundle.executableURL();
@@ -422,11 +453,35 @@ function loadExecutableForBundle(/*Bundle*/ aBundle, success, failure, progress)
 
     aBundle._loadStatus |= CFBundleLoadingExecutable;
 
+#if COMMONJS
+#else
+    if (executableURL.pathExtension() == "js") {
+        var name = aBundle.valueForInfoDictionaryKey("CPBundleName");
+        compilingBundles[name] = aBundle;
+
+        var head = document.getElementsByTagName("head")[0] || document.documentElement,
+            script = document.createElement("script");
+
+        script.src = executableURL.absoluteString();
+        script.onload = script.onreadystatechange = function() {
+            aBundle._loadStatus &= ~CFBundleLoadingExecutable;
+            success();
+        }
+
+
+        head.insertBefore(script, head.firstChild);
+        return;
+    }
+#endif
+
     new FileRequest(executableURL, function(/*Event*/ anEvent)
     {
         try
         {
-            decompileStaticFile(aBundle, anEvent.request.responseText(), executableURL);
+            if (executableURL.pathExtension() == "sj")
+                decompileStaticFile(aBundle, anEvent.request.responseText(), executableURL);
+            else
+                decompileReqFile(aBundle, anEvent.request.responseText(), executableURL);
             aBundle._loadStatus &= ~CFBundleLoadingExecutable;
             success();
         }
@@ -632,6 +687,22 @@ function executeBundle(/*Bundle*/ aBundle, /*Function*/ aCallback)
     }
 
     executeStaticResources(0);
+}
+
+function decompileReqFile(/*Bundle*/ aBundle, /*String*/ aString, /*String*/ aPath)
+{
+    var name = aBundle.valueForInfoDictionaryKey("CPBundleName");
+    compilingBundles[name] = aBundle;
+
+#if COMMONJS
+    try {
+        result = eval(aString);
+    } catch (e) {
+        print(e + ": " + aString);
+    }
+#else
+    console.log("SHOULD LOAD THROUGH TAG!");
+#endif
 }
 
 var STATIC_MAGIC_NUMBER     = "@STATIC",

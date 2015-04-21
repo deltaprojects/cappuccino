@@ -141,27 +141,16 @@ Executable.prototype.toMarkedString = function()
 
     var code = this.code();
 
-    if (code) {
-        var OS = require("os"),
-            uglify = OS.popen("uglifyjs --mangle --compress --enclose", { charset: "UTF-8" }),
-            chunk,
-            fileContents = "";
-
-        uglify.stdin.write(code).close();
-
-        while (chunk = uglify.stdout.read())
-            fileContents += chunk;
-
-        if (fileContents.length == 0) {
-            print("FAILED TO COMPRESS: " + code);
-        } else {
-            code = fileContents.replace(/^\s*!function\s*\(\s*\)\s*{|}\(\)\s*;?\s*$/g, "");
-        }
-    }
-
-
     return markedString + MARKER_TEXT + ";" + code.length + ";" + code;
 };
+
+Executable.prototype.toReqString = function()
+{
+    var deps = this.fileDependencies().map(function(s) { return s.toReqString() }).join(", ");
+    var req = "[function(objj_executeFile) { " + this.code() + "}, [" + deps + "]]";
+    return req;
+}
+
 #endif
 
 Executable.prototype.execute = function()
@@ -568,8 +557,9 @@ Executable.fileExecutableSearcherForURL = function(/*CFURL*/ referenceURL)
 
                 StaticResource.resolveResourceAtURL(aURL, NO, completed, aFilenameTranslateDictionary);
             }
-            else
+            else {
                 StaticResource.resolveResourceAtURLSearchingIncludeURLs(aURL, completed);
+            }
 
             function completed(/*StaticResource*/ aStaticResource)
             {

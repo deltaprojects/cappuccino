@@ -1,7 +1,7 @@
 
 var rootResources = { };
 
-function StaticResource(/*CFURL*/ aURL, /*StaticResource*/ aParent, /*BOOL*/ isDirectory, /*BOOL*/ isResolved, /*Dictionary*/ aFilenameTranslateDictionary)
+function StaticResource(/*CFURL*/ aURL, /*StaticResource*/ aParent, /*BOOL*/ isDirectory, /*BOOL*/ isResolved, /*Dictionary*/ aFilenameTranslateDictionary, thunk, fileDependencies)
 {
     this._parent = aParent;
     this._eventDispatcher = new EventDispatcher(this);
@@ -12,6 +12,8 @@ function StaticResource(/*CFURL*/ aURL, /*StaticResource*/ aParent, /*BOOL*/ isD
     this._URL = aURL; //new CFURL(aName, aParent && aParent.URL().asDirectoryPathURL());
     this._isResolved = !!isResolved;
     this._filenameTranslateDictionary = aFilenameTranslateDictionary;
+    this._thunk = thunk;
+    this._fileDependencies = fileDependencies;
 
     if (isDirectory)
         this._URL = this._URL.asDirectoryPathURL();
@@ -296,6 +298,16 @@ StaticResource.prototype.isFile = function()
 StaticResource.prototype.isDirectory = function()
 {
     return this._isDirectory;
+};
+
+StaticResource.prototype.thunk = function()
+{
+    return this._thunk;
+};
+
+StaticResource.prototype.fileDependencies = function()
+{
+    return this._fileDependencies;
 };
 
 StaticResource.prototype.toString = function(/*BOOL*/ includeNotFounds)

@@ -46,6 +46,11 @@ FileDependency.prototype.toMarkedString = function()
             URLString.length + ";" + URLString;
 }
 
+FileDependency.prototype.toReqString = function()
+{
+    return "['" + this.URL().absoluteString() + "'," + (this.isLocal() ? "true" : "false") + "]";
+}
+
 FileDependency.prototype.toString = function()
 {
     return (this.isLocal() ? "LOCAL: " : "STD: ") + this.URL();

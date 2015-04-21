@@ -319,7 +319,7 @@ BundleTask.prototype.buildIntermediatesProductPath = function()
 
 BundleTask.prototype.buildProductStaticPathForEnvironment = function(anEnvironment)
 {
-    return FILE.join(this.buildProductPath(), anEnvironment.name() + ".environment", this.productName() + ".sj");
+    return FILE.join(this.buildProductPath(), anEnvironment.name() + ".environment", this.productName() + ".js");
 };
 
 BundleTask.prototype.buildProductMHTMLPathForEnvironment = function(anEnvironment)
@@ -380,7 +380,7 @@ BundleTask.prototype.infoPlist = function()
     {
         return anEnvironment.name();
     }));
-    infoPlist.setValueForKey("CPBundleExecutable", this.productName() + ".sj");
+    infoPlist.setValueForKey("CPBundleExecutable", this.productName() + ".js");
 
     var environmentsWithImageSprites = this.environments().filter(
     function(anEnvironment)
@@ -751,9 +751,7 @@ BundleTask.prototype.defineStaticTask = function()
         {
             TERM.stream.print("Creating static file... \0green(" + staticPath +"\0)");
 
-            var fileStream = FILE.open(staticPath, "w+", { charset:"UTF-8" });
-
-            fileStream.write("@STATIC;1.0;");
+            code = "CFBundle.compileBundle('" + productName + "',function(objj_getClass,objj_registerClassPair,class_addIvars,class_addMethods,objj_allocateClassPair,objj_allocateProtocol,objj_registerProtocol,objj_getProtocol){return {";
 
             aTask.prerequisites().forEach(function(aFilename)
             {
@@ -768,27 +766,30 @@ BundleTask.prototype.defineStaticTask = function()
                     var relativePath = flattensSources ? FILE.basename(aFilename) : FILE.relative(sourcesPath, aFilename);
 
                     // FIXME: We need to do this for now due to file.read adding newlines in Rhino. Revert when fixed.
-                    //fileStream.write(FILE.read(aFilename, "b").decodeToString("UTF-8"));
-                    fileStream.write("p;" + relativePath.length + ";" + relativePath);
-
+                    code += '"' + relativePath + '":';
                     var fileContents = FILE.read(aFilename, "b").decodeToString("UTF-8");
-
-                    fileStream.write("t;" + fileContents.length + ";" + fileContents);
+                    code += fileContents + ",";
                 }
 
                 else if (aFilename.indexOf(resourcesPath) === 0 && !isImage(aFilename))
                 {
                     var resourcePath = "Resources/" + FILE.relative(resourcesPath, aFilename);
 
-                    fileStream.write("p;");
-
                     contents = FILE.read(aFilename, "b").decodeToString("UTF-8");
 
-                    fileStream.write(resourcePath.length + ";" + resourcePath + contents);
                 }
             }, this);
 
-            fileStream.write("e;");
+            code += "null:null}})";
+
+            TERM.stream.print("Compressing static file... \0green(" + staticPath +"\0)");
+
+#if COMMONJS
+            code = minify(code, {fromString: true});
+#endif
+
+            var fileStream = FILE.open(staticPath, "w+", { charset:"UTF-8" });
+            fileStream.write(code);
             fileStream.close();
 
            // Make sure all classes are removed and all FileExecutables are removed.
@@ -913,7 +914,7 @@ BundleTask.prototype.defineSourceTasks = function()
                         translatedFilename = translateFilenameToPath[aFilename] ? translateFilenameToPath[aFilename] : aFilename,
                         executer = new ObjectiveJ.FileExecutable(otherwayTranslatedFilename);
 
-                    var compiled = executer.toMarkedString();
+                    var compiled = executer.toReqString();
                 }
 
                 if (rhinoUglyFix)

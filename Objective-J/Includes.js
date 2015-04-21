@@ -30,6 +30,64 @@
 
 #include "jsx.js"
 
+#if COMMONJS
+
+minify = (function() {
+  #include "uglifyjs/utils.js"
+  #include "uglifyjs/ast.js"
+  #include "uglifyjs/parse.js"
+  #include "uglifyjs/transform.js"
+  #include "uglifyjs/scope.js"
+  #include "uglifyjs/output.js"
+  #include "uglifyjs/compress.js"
+  #include "uglifyjs/sourcemap.js"
+  #include "uglifyjs/mozilla-ast.js"
+  #include "uglifyjs/propmangle.js"
+
+  return function(code, options) {
+    defaults(options, {
+        spidermonkey : false,
+        outSourceMap : null,
+        sourceRoot   : null,
+        inSourceMap  : null,
+        fromString   : false,
+        warnings     : false,
+        mangle       : {},
+        output       : null,
+        compress     : {}
+    });
+    base54.reset();
+
+    var toplevel = parse(code, {
+        filename: "?",
+        toplevel: toplevel
+    });
+
+    if (options.compress) {
+        var compress = { warnings: options.warnings };
+        merge(compress, options.compress);
+        toplevel.figure_out_scope();
+        var sq = Compressor(compress);
+        toplevel = toplevel.transform(sq);
+    }
+
+    // 3. mangle
+    if (options.mangle) {
+        toplevel.figure_out_scope(options.mangle);
+        toplevel.compute_char_frequency(options.mangle);
+        toplevel.mangle_names(options.mangle);
+    }
+
+    var output = {};
+    var stream = OutputStream(output);
+    toplevel.print(stream);
+
+    return stream + ""
+  }
+})();
+
+#endif
+
 #include "OldBrowserCompatibility.js"
 #include "DebugOptions.js"
 #include "json2.js"

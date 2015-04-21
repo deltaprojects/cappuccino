@@ -34,22 +34,33 @@ function FileExecutable(/*CFURL|String*/ aURL, /*Dictionary*/ aFilenameTranslate
 
     FileExecutablesForURLStrings[URLString] = this;
 
-    var fileContents = StaticResource.resourceAtURL(aURL).contents(),
+    var resource = StaticResource.resourceAtURL(aURL),
+        fileContents = resource.contents(),
         executable = NULL,
         extension = aURL.pathExtension().toLowerCase();
 
-    if (extension === "jx" && !fileContents.match(/^@STATIC;/)) {
-        extension = "j";
-        fileContents = transform(fileContents);
-    }
-    if (fileContents.match(/^@STATIC;/))
-        executable = decompile(fileContents, aURL);
-    else if ((extension === "j" || !extension) && !fileContents.match(/^{/))
-        executable = exports.ObjJAcornCompiler.compileFileDependencies(fileContents, aURL, ObjJAcornCompiler.Flags.IncludeDebugSymbols);
-    else
-        executable = new Executable(fileContents, [], aURL);
+    if (fileContents == "<thunk>") {
+        var deps = resource.fileDependencies().map(function(path) {
+            return new FileDependency(new CFURL(path[0]), path[1]);
+        })
+        Executable.apply(this, ["<thunk>", deps, aURL, function(global, execFile) {
+            resource.thunk().apply(global, [execFile]);
+        }, null, aFilenameTranslateDictionary]);
+    } else {
+        if (extension === "jx" && !fileContents.match(/^@STATIC;/)) {
+            extension = "j";
+            fileContents = transform(fileContents);
+        }
 
-    Executable.apply(this, [executable.code(), executable.fileDependencies(), aURL, executable._function, executable._compiler, aFilenameTranslateDictionary]);
+        if (fileContents.match(/^@STATIC;/))
+            executable = decompile(fileContents, aURL);
+        else if ((extension === "j" || !extension) && !fileContents.match(/^{/))
+            executable = exports.ObjJAcornCompiler.compileFileDependencies(fileContents, aURL, ObjJAcornCompiler.Flags.IncludeDebugSymbols);
+        else
+            executable = new Executable(fileContents, [], aURL);
+
+        Executable.apply(this, [executable.code(), executable.fileDependencies(), aURL, executable._function, executable._compiler, aFilenameTranslateDictionary]);
+    }
 
     this._hasExecuted = NO;
 }
