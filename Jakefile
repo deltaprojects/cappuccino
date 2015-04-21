@@ -8,7 +8,7 @@ var FILE = require("file"),
     jake = require("jake"),
     stream = require("narwhal/term").stream;
 
-var subprojects = ["Objective-J", "CommonJS", "Foundation", "AppKit"/*, "Tools"*/];
+var subprojects = ["Objective-J", "CommonJS", "Foundation", "AppKit", "Tools"];
 
 ["build", "clean", "clobber"].forEach(function(aTaskName)
 {
@@ -43,6 +43,15 @@ task ("CommonJS", [$BUILD_CJS_OBJECTIVE_J_DEBUG_FRAMEWORKS, $BUILD_CJS_CAPPUCCIN
 
 task ("install", ["CommonJS"], function()
 {
+    $BUILD_PATH = FILE.join($BUILD_DIR, $CONFIGURATION, 'AppKit');
+    $BUILD_CJS_CAPPUCCINO_APPKIT = FILE.join($BUILD_CJS_CAPPUCCINO_FRAMEWORKS, "AppKit");
+
+    cp_r(FILE.join($HOME_DIR, 'static/Aristo.blend'), FILE.join($BUILD_PATH, 'Resources', 'Aristo.blend'));
+    cp_r(FILE.join($HOME_DIR, 'static/Aristo.blend'), FILE.join($BUILD_CJS_CAPPUCCINO_APPKIT, "Resources", "Aristo.blend"));
+
+    cp_r(FILE.join($HOME_DIR, 'static/Aristo2.blend'), FILE.join($BUILD_PATH, 'Resources', 'Aristo2.blend'));
+    cp_r(FILE.join($HOME_DIR, 'static/Aristo2.blend'), FILE.join($BUILD_CJS_CAPPUCCINO_APPKIT, "Resources", "Aristo2.blend"));
+
     installCopy($BUILD_CJS_OBJECTIVE_J, false);
     installCopy($BUILD_CJS_CAPPUCCINO, false);
 });

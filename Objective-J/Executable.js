@@ -209,8 +209,11 @@ Executable.prototype.setCode = function(code)
 {
     this._code = code;
 
+    var isTheme = this._URL.absoluteString().indexOf("/AppKit/Themes/") != -1 ||
+                  code.indexOf("exports.blend") != -1;
+
     var isBrowser = window.encodeURIComponent;
-    if (!isBrowser) {
+    if (!isBrowser && !isTheme) {
         this._storedCode = code;
 
         walk = ObjectiveJ.acorn.walk;
