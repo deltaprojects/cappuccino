@@ -753,8 +753,11 @@ BundleTask.prototype.defineStaticTask = function()
 
             code = "CFBundle.compileBundle('" + productName + "',function(objj_getClass,objj_registerClassPair,class_addIvars,class_addMethods,objj_allocateClassPair,objj_allocateProtocol,objj_registerProtocol,objj_getProtocol){return {";
 
+            var localCode = [];
+
             aTask.prerequisites().forEach(function(aFilename)
             {
+                var local = "";
                 // Our prerequisites will contain directories due to filedir.
                 if (!FILE.isFile(aFilename))
                     return;
@@ -766,9 +769,9 @@ BundleTask.prototype.defineStaticTask = function()
                     var relativePath = flattensSources ? FILE.basename(aFilename) : FILE.relative(sourcesPath, aFilename);
 
                     // FIXME: We need to do this for now due to file.read adding newlines in Rhino. Revert when fixed.
-                    code += '"' + relativePath + '":';
+                    local = '"' + relativePath + '":';
                     var fileContents = FILE.read(aFilename, "b").decodeToString("UTF-8");
-                    code += fileContents + ",";
+                    local += fileContents;
                 }
 
                 else if (aFilename.indexOf(resourcesPath) === 0 && !isImage(aFilename))
@@ -778,9 +781,11 @@ BundleTask.prototype.defineStaticTask = function()
                     contents = FILE.read(aFilename, "b").decodeToString("UTF-8");
 
                 }
+
+                localCode.push(local);
             }, this);
 
-            code += "null:null}})";
+            code += localCode.join(",") + "}})";
 
             TERM.stream.print("Compressing static file... \0green(" + staticPath +"\0)");
 

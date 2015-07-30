@@ -187,6 +187,9 @@ Executable.prototype.execute = function()
 
     var result = this._function.apply(global, this.functionArguments());
 
+    this._code = null;
+    this._function = null;
+
     if (this._storedCode) {
         result = this._storedCode;
     }

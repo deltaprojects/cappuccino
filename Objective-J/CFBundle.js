@@ -433,13 +433,15 @@ CFBundle.compileBundle = function(name, f) {
         objj_registerProtocol,
         objj_getProtocol
     );
-    for (var name in deps) {
-        if (deps.hasOwnProperty(name) && name != "null") {
-            var fileURL = new CFURL(name, bundleURL),
+    for (var dependencyName in deps) {
+        if (deps.hasOwnProperty(dependencyName)) {
+            var fileURL = new CFURL(dependencyName, bundleURL),
                 parent = StaticResource.resourceAtURL(new CFURL(".", fileURL), YES);
 
-            var file = new StaticResource(fileURL, parent, NO, YES, null, deps[name][0], deps[name][1]);
-            file.write("<thunk>");
+            if (deps[dependencyName]) {
+                var file = new StaticResource(fileURL, parent, NO, YES, null, deps[dependencyName][0], deps[dependencyName][1]);
+                file.write("<thunk>");
+            }
         }
     }
 }
@@ -655,7 +657,6 @@ function executeBundle(/*Bundle*/ aBundle, /*Function*/ aCallback)
             if (staticResource.isFile())
             {
                 var executable = new FileExecutable(staticResource.URL());
-
                 if (executable.hasLoadedFileDependencies())
                     executable.execute();
 
