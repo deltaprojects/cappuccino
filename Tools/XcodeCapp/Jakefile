@@ -1,8 +1,7 @@
 
 require("../../common.jake");
 
-var SYSTEM = require("system"),
-    OS = require("os"),
+var OS = require("os"),
     task = require("jake").task,
     stream = require("narwhal/term").stream,
     applicationName = "XcodeCapp.app";
@@ -43,15 +42,11 @@ task ("build", function()
         if (OS.system("xcodebuild " + args))
             OS.exit(1);
 
-        if (!SYSTEM.env["CI"] && !executableExists("xcc"))
+        if (!executableExists("xcc"))
         {
-            print("\nWould you like to install the xcc command line tool in /usr/local/bin? yes or no:");
-
-            if (system.stdin.readLine() == "yes\n")
-            {
-                sudo(["mkdir", "-p", "/usr/local/bin"]);
-                sudo(["ln", "-s", "/Applications/XcodeCapp.app/Contents/MacOS/xcc", "/usr/local/bin/"]);
-            }
+            
+            sudo(["mkdir", "-p", "/usr/local/bin"]);
+            sudo(["ln", "-s", "/Applications/XcodeCapp.app/Contents/MacOS/xcc", "/usr/local/bin/"]);
         }
     }
     else
