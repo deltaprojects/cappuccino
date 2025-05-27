@@ -19,7 +19,7 @@ task ("build", function()
     {
         var versions = p.stdout.read().split("."),
             majorVersion = parseInt(versions[0], 10),
-            minorVersion = parseInt(versions[1], 10),
+            minorVersion = 6,
             buildVersion = parseInt(versions[2], 10);
 
         if (majorVersion < 10 || minorVersion < 7)
