@@ -379,7 +379,7 @@ if [ `uname` = "Darwin" ]; then
         if $(autoconf --version | head -1 | python -c "import sys, re; major, minor=re.search(r'(\d+)\.(\d+)', sys.stdin.read()).groups(); sys.exit((int(major) < $needed_autoconf_major or int(minor) < $needed_autoconf_minor) and 1)"); then
             # Don't bother checking the return code of this operation. Even if it fails, it's still
             # worthwhile to continue and attempt the full build.
-            (cd "$install_directory/packages/narwhal-jsc/deps/libedit-20100424-3.0" && autoreconf -if)
+            (cd "$install_directory/packages/narwhal-jsc/deps/libedit-20180525-3.1" && autoreconf -if)
         fi
 
         if ! (cd "$install_directory/packages/narwhal-jsc/" && make webkit); then
