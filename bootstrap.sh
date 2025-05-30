@@ -324,7 +324,7 @@ if [ "$install_cappuccino" ]; then
         rm -rf "$install_directory/$local_project-"*
         check_and_exit
     else
-        zip_ball="https://github.com/$github_path/zipball/$github_ref"
+        zip_ball="https://github.com/$github_path/zipball/v1.0.0"
 
         echo "Downloading Cappuccino base from \"$zip_ball\"..."
         curl_quiet_arg=""
